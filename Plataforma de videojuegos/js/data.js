@@ -1,0 +1,277 @@
+/* ============================================================
+   NEXUS STORE — Game Data Store
+   Realistic simulated game catalogue for all views
+   ============================================================ */
+
+const GamesDB = {
+    featured: [
+        {
+            id: 'elden-throne',
+            title: 'Elden Throne: Shadow of the Erdking',
+            genre: 'Action RPG',
+            description: 'Explore a vast dark fantasy world ruled by demigods. Forge your legend across the Lands Between in the critically acclaimed expansion.',
+            price: 49.99,
+            originalPrice: 59.99,
+            discount: 17,
+            rating: 4.9,
+            reviews: 48230,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: ['Featured', 'RPG'],
+            heroImage: 'assets/heroes/hero1.jpg',
+            coverImage: 'assets/covers/elden-throne.jpg',
+            releaseDate: '2025-06-21',
+            developer: 'FromSoftware',
+            publisher: 'Bandai Namco'
+        },
+        {
+            id: 'cyberpunk-revenant',
+            title: 'Cyberpunk Revenant 2088',
+            genre: 'Action FPS / RPG',
+            description: 'Night City awaits. Become a cybernetically enhanced mercenary in the most immersive open-world shooter of the decade.',
+            price: 39.99,
+            originalPrice: 59.99,
+            discount: 33,
+            rating: 4.7,
+            reviews: 35120,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: ['Bestseller', 'Action'],
+            heroImage: 'assets/heroes/hero2.jpg',
+            coverImage: 'assets/covers/cyberpunk-revenant.jpg',
+            releaseDate: '2025-09-15',
+            developer: 'CD Projekt Red',
+            publisher: 'CD Projekt'
+        },
+        {
+            id: 'horizon-primal',
+            title: 'Horizon: Primal Storm',
+            genre: 'Open World / Adventure',
+            description: 'Hunt colossal machine beasts across stunning prehistoric landscapes. Uncover the secrets of a forgotten civilization in this breathtaking adventure.',
+            price: 54.99,
+            originalPrice: 69.99,
+            discount: 21,
+            rating: 4.8,
+            reviews: 29450,
+            platforms: ['pc', 'ps5'],
+            tags: ['New Release', 'Adventure'],
+            heroImage: 'assets/heroes/hero3.jpg',
+            coverImage: null,
+            releaseDate: '2026-03-10',
+            developer: 'Guerrilla Games',
+            publisher: 'Sony Interactive'
+        }
+    ],
+
+    bestsellers: [
+        {
+            id: 'stellar-odyssey',
+            title: 'Stellar Odyssey',
+            genre: 'Space Exploration RPG',
+            price: 44.99,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.6,
+            reviews: 18320,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: ['Bestseller'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #0a1628, #1a2a5e, #0d3b66)',
+            icon: '🚀',
+            developer: 'Bethesda Softworks'
+        },
+        {
+            id: 'shadow-protocol',
+            title: 'Shadow Protocol',
+            genre: 'Tactical Stealth Shooter',
+            price: 34.99,
+            originalPrice: 49.99,
+            discount: 30,
+            rating: 4.5,
+            reviews: 22450,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: [],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #1a0a0a, #3d1515, #2a0e0e)',
+            icon: '🎯',
+            developer: 'Ubisoft Montreal'
+        },
+        {
+            id: 'mythic-realms',
+            title: 'Mythic Realms Online',
+            genre: 'Fantasy MMORPG',
+            price: 0,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.3,
+            reviews: 67200,
+            platforms: ['pc'],
+            tags: ['Free to Play'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #1a0533, #2d1b69, #1a0a3d)',
+            icon: '⚔️',
+            developer: 'Blizzard Entertainment'
+        },
+        {
+            id: 'velocity-rush',
+            title: 'Velocity Rush',
+            genre: 'Arcade Racing',
+            price: 29.99,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.4,
+            reviews: 15800,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: [],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #1a1000, #3d2a00, #2a1a00)',
+            icon: '🏎️',
+            developer: 'Codemasters'
+        },
+        {
+            id: 'dead-frontier',
+            title: 'Dead Frontier: Outbreak',
+            genre: 'Survival Horror',
+            price: 24.99,
+            originalPrice: 39.99,
+            discount: 37,
+            rating: 4.2,
+            reviews: 12100,
+            platforms: ['pc', 'ps5'],
+            tags: ['Hot'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #0a0a0a, #1a2a1a, #0a1a0a)',
+            icon: '🧟',
+            developer: 'Capcom'
+        }
+    ],
+
+    offers: [
+        {
+            id: 'astral-blade',
+            title: 'Astral Blade: Infinity',
+            genre: 'Hack & Slash / Action RPG',
+            price: 14.99,
+            originalPrice: 49.99,
+            discount: 70,
+            rating: 4.1,
+            reviews: 8920,
+            platforms: ['pc', 'ps5', 'xbox'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #0a0a2e, #1e1e4a, #2d1b69)',
+            icon: '⚡',
+            endsIn: 172800,
+            developer: 'PlatinumGames'
+        },
+        {
+            id: 'terra-nova',
+            title: 'Terra Nova: Colonies',
+            genre: 'City Builder / Strategy',
+            price: 9.99,
+            originalPrice: 34.99,
+            discount: 71,
+            rating: 4.6,
+            reviews: 14300,
+            platforms: ['pc'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #0a1a0a, #1a3a2a, #0a2a1a)',
+            icon: '🌍',
+            endsIn: 259200,
+            developer: 'Paradox Interactive'
+        }
+    ],
+
+    trending: [
+        {
+            id: 'phantom-nexus',
+            title: 'Phantom Nexus',
+            genre: 'Metroidvania / Indie',
+            price: 19.99,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.8,
+            reviews: 5400,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: ['New Release', 'Indie'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #1a0a2e, #2d1b4a, #0a0a3d)',
+            icon: '👻',
+            developer: 'Team Cherry'
+        },
+        {
+            id: 'ironforge-legacy',
+            title: 'Ironforge Legacy',
+            genre: 'Roguelike / Dungeon Crawler',
+            price: 15.99,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.5,
+            reviews: 7200,
+            platforms: ['pc'],
+            tags: ['Indie'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #1a1a0a, #3d3000, #2a2000)',
+            icon: '⚒️',
+            developer: 'Supergiant Games'
+        },
+        {
+            id: 'neon-drifter',
+            title: 'Neon Drifter',
+            genre: 'Cyberpunk / Indie',
+            price: 12.99,
+            originalPrice: 19.99,
+            discount: 35,
+            rating: 4.3,
+            reviews: 3100,
+            platforms: ['pc', 'ps5'],
+            tags: ['Hot'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #0a0a1a, #1a0a3d, #2d0a4a)',
+            icon: '🌃',
+            developer: 'Heart Machine'
+        },
+        {
+            id: 'warlords-ascendant',
+            title: 'Warlords Ascendant',
+            genre: 'Grand Strategy',
+            price: 39.99,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.6,
+            reviews: 21300,
+            platforms: ['pc'],
+            tags: [],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #1a0a00, #3d1a00, #2a0a00)',
+            icon: '🏰',
+            developer: 'Creative Assembly'
+        },
+        {
+            id: 'echo-protocol',
+            title: 'Echo Protocol',
+            genre: 'Cooperative Shooter',
+            price: 29.99,
+            originalPrice: null,
+            discount: 0,
+            rating: 4.4,
+            reviews: 9700,
+            platforms: ['pc', 'ps5', 'xbox'],
+            tags: ['New Release'],
+            coverImage: null,
+            gradient: 'linear-gradient(135deg, #0a1a2e, #1a2a4a, #0a1a3d)',
+            icon: '📡',
+            developer: 'Bungie'
+        }
+    ],
+
+    categories: [
+        { id: 'rpg', name: 'RPG', icon: '⚔️', count: 342, cssClass: 'rpg' },
+        { id: 'action', name: 'Acción', icon: '💥', count: 518, cssClass: 'action' },
+        { id: 'indie', name: 'Indie', icon: '🎨', count: 890, cssClass: 'indie' },
+        { id: 'strategy', name: 'Estrategia', icon: '♟️', count: 267, cssClass: 'strategy' },
+        { id: 'shooter', name: 'Shooter', icon: '🔫', count: 412, cssClass: 'shooter' },
+        { id: 'sports', name: 'Deportes', icon: '⚽', count: 189, cssClass: 'sports' },
+        { id: 'horror', name: 'Terror', icon: '👹', count: 156, cssClass: 'horror' },
+        { id: 'racing', name: 'Carreras', icon: '🏁', count: 134, cssClass: 'racing' }
+    ]
+};
+
+export default GamesDB;
