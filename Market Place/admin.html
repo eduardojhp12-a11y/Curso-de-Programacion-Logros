@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="l-container">
+            <div class="header__top">
+                <a href="index.html" class="header__logo">
+                    Market<span>Admin</span>
+                </a>
+                <div class="header__actions">
+                    <a href="dashboard.html" class="header__action-link">
+                        <span class="header__action-text--bold">Volver a la Tienda</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="l-container">
+        <div style="padding: var(--space-4) 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+                <h1>Panel de Administración</h1>
+                <button class="c-button c-button--primary js-open-add-modal">Añadir Producto</button>
+            </div>
+
+            <!-- KPIs -->
+            <div class="admin-kpi-grid">
+                <div class="admin-kpi-card">
+                    <p class="admin-kpi-card__title">Ventas Totales</p>
+                    <p class="admin-kpi-card__value js-kpi-sales">$0</p>
+                </div>
+                <div class="admin-kpi-card">
+                    <p class="admin-kpi-card__title">Pedidos Completados</p>
+                    <p class="admin-kpi-card__value js-kpi-orders">0</p>
+                </div>
+                <div class="admin-kpi-card">
+                    <p class="admin-kpi-card__title">Productos en Inventario</p>
+                    <p class="admin-kpi-card__value js-kpi-products">0</p>
+                </div>
+            </div>
+
+            <!-- Inventory Table -->
+            <div class="dashboard-card">
+                <h2 class="dashboard-card__title">Inventario de Productos</h2>
+                <div class="c-table-wrapper">
+                    <table class="c-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Imagen</th>
+                                <th>Título</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-table-body">
+                            <!-- Inyectado por JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit Product Modal -->
+    <div class="c-modal" id="product-modal">
+        <div class="c-modal__content">
+            <button class="c-modal__close js-close-modal">&times;</button>
+            <h2 class="c-summary-card__title" id="modal-title">Añadir Producto</h2>
+            <form id="product-form">
+                <input type="hidden" id="p-id">
+                <div class="c-form__group">
+                    <label class="c-form__label">Título</label>
+                    <input type="text" id="p-title" class="c-form__input" required>
+                </div>
+                <div class="c-form__group">
+                    <label class="c-form__label">Categoría</label>
+                    <select id="p-category" class="c-form__input" required>
+                        <option value="electronics">Electrónica</option>
+                        <option value="clothing">Ropa</option>
+                        <option value="home">Hogar</option>
+                        <option value="toys">Juguetes</option>
+                        <option value="books">Libros</option>
+                    </select>
+                </div>
+                <div class="c-form__group">
+                    <label class="c-form__label">Marca</label>
+                    <input type="text" id="p-brand" class="c-form__input" required>
+                </div>
+                <div class="c-form__group">
+                    <label class="c-form__label">Precio ($)</label>
+                    <input type="number" id="p-price" step="0.01" class="c-form__input" required>
+                </div>
+                <div class="c-form__group">
+                    <label class="c-form__label">URL de Imagen</label>
+                    <input type="url" id="p-image" class="c-form__input" required>
+                </div>
+                <button type="submit" class="c-button c-button--primary" style="width: 100%;">Guardar Producto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="global.js"></script>
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

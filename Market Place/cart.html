@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="l-container">
+            <div class="header__top">
+                <a href="index.html" class="header__logo">
+                    Market<span>Place</span>
+                </a>
+                <form class="header__search" action="catalog.html" method="GET">
+                    <label for="search" class="u-visually-hidden">Buscar productos</label>
+                    <input type="text" id="search" name="q" class="header__search-input" placeholder="Buscar tecnología, ropa y más...">
+                    <button type="submit" class="header__search-btn" aria-label="Buscar">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                </form>
+                <div class="header__actions">
+                    <a href="login.html" class="header__action-link js-auth-link">
+                        <span class="header__action-text--small">Hola, Identifícate</span>
+                        <span class="header__action-text--bold">Cuentas y Pedidos</span>
+                    </a>
+                    <a href="cart.html" class="header__action-link header__cart">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="header__cart-count js-cart-count" style="display: none;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="header__nav">
+            <div class="l-container">
+                <ul class="header__nav-list">
+                    <li><a href="category.html?type=electronics" class="header__nav-link">Electrónica</a></li>
+                    <li><a href="category.html?type=clothing" class="header__nav-link">Ropa y Moda</a></li>
+                    <li><a href="category.html?type=home" class="header__nav-link">Hogar</a></li>
+                    <li><a href="category.html?type=toys" class="header__nav-link">Juguetes</a></li>
+                    <li><a href="category.html?type=books" class="header__nav-link">Libros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-container l-cart js-cart-container">
+        <!-- Inyectado por JS -->
+    </main>
+
+    <script src="global.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

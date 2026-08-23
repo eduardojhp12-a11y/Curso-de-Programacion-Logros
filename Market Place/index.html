@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Global -->
+    <header class="header">
+        <div class="l-container">
+            <div class="header__top">
+                <a href="index.html" class="header__logo">
+                    Market<span>Place</span>
+                </a>
+
+                <form class="header__search" action="catalog.html" method="GET">
+                    <label for="search" class="u-visually-hidden">Buscar productos</label>
+                    <input type="text" id="search" name="q" class="header__search-input" placeholder="Buscar tecnología, ropa y más...">
+                    <button type="submit" class="header__search-btn" aria-label="Buscar">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                </form>
+
+                <div class="header__actions">
+                    <a href="login.html" class="header__action-link js-auth-link">
+                        <span class="header__action-text--small">Hola, Identifícate</span>
+                        <span class="header__action-text--bold">Cuentas y Pedidos</span>
+                    </a>
+                    
+                    <a href="cart.html" class="header__action-link header__cart">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="header__cart-count js-cart-count" style="display: none;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <div class="l-container">
+                <ul class="header__nav-list">
+                    <li><a href="catalog.html?category=electronics" class="header__nav-link">Electrónica</a></li>
+                    <li><a href="catalog.html?category=clothing" class="header__nav-link">Ropa y Moda</a></li>
+                    <li><a href="catalog.html?category=home" class="header__nav-link">Hogar</a></li>
+                    <li><a href="catalog.html?category=toys" class="header__nav-link">Juguetes</a></li>
+                    <li><a href="catalog.html?category=books" class="header__nav-link">Libros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="l-main l-container">
+        <div class="home-layout">
+            <aside class="home-sidebar">
+                <h2 class="home-sidebar__title">Categorías</h2>
+                <ul class="home-sidebar__list">
+                    <li><a href="catalog.html?category=electronics" class="home-sidebar__link">Tecnología</a></li>
+                    <li><a href="catalog.html?category=clothing" class="home-sidebar__link">Ropa y Accesorios</a></li>
+                    <li><a href="catalog.html?category=home" class="home-sidebar__link">Hogar y Cocina</a></li>
+                    <li><a href="catalog.html?category=sports" class="home-sidebar__link">Deportes</a></li>
+                    <li><a href="catalog.html?category=books" class="home-sidebar__link">Libros</a></li>
+                </ul>
+            </aside>
+            <section class="home-content">
+                <div class="hero-carousel">
+                    <div class="hero-carousel__track js-carousel-track">
+                        <div class="hero-carousel__slide" style="background-color: #232F3E; color: white;">
+                            <h2>La mejor tecnología del 2026</h2>
+                            <p>Descubre las últimas novedades en smartphones y laptops.</p>
+                            <a href="catalog.html" class="c-button c-button--primary c-button--large">Comprar ahora</a>
+                        </div>
+                        <div class="hero-carousel__slide" style="background-color: #067D62; color: white;">
+                            <h2>Renueva tu hogar</h2>
+                            <p>Ofertas exclusivas en muebles y decoración.</p>
+                            <a href="catalog.html" class="c-button c-button--primary c-button--large">Ver ofertas</a>
+                        </div>
+                    </div>
+                    <button class="hero-carousel__btn hero-carousel__btn--prev js-carousel-prev">&lt;</button>
+                    <button class="hero-carousel__btn hero-carousel__btn--next js-carousel-next">&gt;</button>
+                </div>
+
+                <div class="product-section">
+                    <h2 class="product-section__title">Productos Destacados</h2>
+                    <div class="product-grid js-featured-products">
+                        <!-- Productos inyectados por JS -->
+                    </div>
+                </div>
+
+                <div class="product-section">
+                    <h2 class="product-section__title">Vistos Recientemente</h2>
+                    <div class="product-grid js-recent-products">
+                        <!-- Productos inyectados por JS -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Global -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer__grid">
+                <div>
+                    <h3 class="footer__column-title">Conócenos</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Acerca de nosotros</a></li>
+                        <li><a href="#" class="footer__link">Trabaja con nosotros</a></li>
+                        <li><a href="#" class="footer__link">Sostenibilidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__column-title">Métodos de Pago</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Tarjetas de Crédito</a></li>
+                        <li><a href="#" class="footer__link">Tarjetas de Débito</a></li>
+                        <li><a href="#" class="footer__link">Cupones y Regalos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__column-title">Podemos Ayudarte</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Rastrear un paquete</a></li>
+                        <li><a href="#" class="footer__link">Devoluciones</a></li>
+                        <li><a href="#" class="footer__link">Atención al Cliente</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Marketplace. Todos los derechos reservados. Creado como demostración técnica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+    <script src="data.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

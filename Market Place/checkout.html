@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="l-container">
+            <div class="header__top" style="justify-content: center;">
+                <a href="index.html" class="header__logo">
+                    Market<span>Place</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="l-container">
+        <div class="l-checkout">
+            <h1 style="font-size: 2rem; margin-bottom: var(--space-4);">Completar tu pedido</h1>
+            
+            <form id="checkout-form">
+                <div class="c-checkout-step">
+                    <h2 class="c-checkout-step__title"><span class="c-checkout-step__number">1</span> Dirección de envío</h2>
+                    <div class="c-form__group">
+                        <label for="address" class="c-form__label">Dirección Completa</label>
+                        <input type="text" id="address" class="c-form__input" placeholder="Calle, número, colonia..." required>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3);">
+                        <div class="c-form__group">
+                            <label for="city" class="c-form__label">Ciudad</label>
+                            <input type="text" id="city" class="c-form__input" required>
+                        </div>
+                        <div class="c-form__group">
+                            <label for="zip" class="c-form__label">Código Postal</label>
+                            <input type="text" id="zip" class="c-form__input" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-checkout-step">
+                    <h2 class="c-checkout-step__title"><span class="c-checkout-step__number">2</span> Método de pago</h2>
+                    <div class="c-form__group">
+                        <label class="c-filter-label" style="font-size: 1rem; margin-bottom: var(--space-2);">
+                            <input type="radio" name="payment" value="card" checked> Tarjeta de Crédito/Débito
+                        </label>
+                        <input type="text" class="c-form__input" placeholder="Número de tarjeta (simulado)" required style="margin-bottom: var(--space-2);">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3);">
+                            <input type="text" class="c-form__input" placeholder="MM/AA" required>
+                            <input type="text" class="c-form__input" placeholder="CVV" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-checkout-step">
+                    <h2 class="c-checkout-step__title"><span class="c-checkout-step__number">3</span> Resumen del Pedido</h2>
+                    <div id="checkout-summary">
+                        <!-- Inyectado por JS -->
+                    </div>
+                </div>
+
+                <button type="submit" class="c-button c-button--primary c-button--large" style="width: 100%; margin-top: var(--space-3);">
+                    Confirmar Pedido y Pagar
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="global.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

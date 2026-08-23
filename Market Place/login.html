@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="l-container">
+            <div class="header__top" style="justify-content: center;">
+                <a href="index.html" class="header__logo">
+                    Market<span>Place</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="l-main l-container l-auth">
+        <div class="c-auth-card">
+            <h1 class="c-auth-card__title">Iniciar Sesión</h1>
+            
+            <form id="login-form" novalidate>
+                <div class="c-form__group">
+                    <label for="email" class="c-form__label">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="c-form__input" required>
+                    <span class="c-form__error" id="error-email">Introduce un correo electrónico válido.</span>
+                </div>
+                
+                <div class="c-form__group">
+                    <label for="password" class="c-form__label">Contraseña</label>
+                    <input type="password" id="password" name="password" class="c-form__input" required>
+                    <span class="c-form__error" id="error-password">La contraseña debe tener al menos 6 caracteres.</span>
+                </div>
+                
+                <button type="submit" class="c-button c-button--primary c-button--large" style="width: 100%;">
+                    Continuar
+                </button>
+            </form>
+            
+            <div class="c-auth-card__footer">
+                <p>¿Eres nuevo en MarketPlace?</p>
+                <a href="register.html" class="c-button" style="border: 1px solid var(--color-border); width: 100%; margin-top: var(--space-2); color: var(--color-text-main);">
+                    Crea tu cuenta de MarketPlace
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="global.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
