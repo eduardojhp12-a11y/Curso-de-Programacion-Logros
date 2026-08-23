@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVibe - Tu plataforma de streaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#home" class="logo" aria-label="StreamVibe Inicio">
+                <span class="logo__text">Stream<span class="logo__highlight">Vibe</span></span>
+            </a>
+            <nav class="nav" aria-label="Navegación Principal">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link nav__link--active">Inicio</a></li>
+                    <li><a href="#explore" class="nav__link">Explorar</a></li>
+                    <li><a href="#mylist" class="nav__link">Mi Lista</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="header__search-btn" aria-label="Buscar contenido">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DE LAS VISTAS (SPA) -->
+    <main id="app-container" class="main-content">
+        
+        <!-- PÁGINA 1: INICIO -->
+        <section id="view-home" class="view view--active" aria-label="Inicio">
+            <div class="hero">
+                <div class="hero__background">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fondo de la película Dune" class="hero__bg-img">
+                    <div class="hero__overlay"></div>
+                </div>
+                <div class="container hero__content">
+                    <span class="badge" aria-label="Etiqueta: Nuevo Lanzamiento">NUEVO LANZAMIENTO</span>
+                    <h1 class="hero__title">Dune: Parte Dos</h1>
+                    <div class="hero__meta">
+                        <span>2024</span>
+                        <span class="hero__rating" aria-label="Clasificación por edad">13+</span>
+                        <span>2h 46m</span>
+                        <span>Ciencia Ficción</span>
+                    </div>
+                    <p class="hero__synopsis">El duque Paul Atreides se une a los Fremen y comienza un viaje espiritual y marcial para convertirse en Muad'Dib, mientras intenta evitar el terrible pero inevitable futuro que ha presenciado.</p>
+                    <div class="hero__actions">
+                        <button class="btn btn--primary" aria-label="Reproducir Dune Parte Dos">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Reproducir
+                        </button>
+                        <button class="btn btn--secondary" onclick="toggleWatchlist('m12')" aria-label="Añadir Dune Parte Dos a Mi Lista">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            Mi Lista
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousels-container">
+                <!-- Carrusel 1 -->
+                <section class="carousel-section" aria-labelledby="carousel-trending">
+                    <div class="container">
+                        <h2 id="carousel-trending" class="carousel-section__title">Tendencias de hoy</h2>
+                        <div class="carousel">
+                            <div class="carousel__track" role="list">
+                                <article class="movie-card" data-id="m2" tabindex="0" role="listitem">
+                                    <div class="movie-card__poster">
+                                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Póster de Interstellar" loading="lazy">
+                                        <div class="movie-card__overlay"><button class="movie-card__play" aria-label="Reproducir Interstellar"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button></div>
+                                    </div>
+                                    <h3 class="movie-card__title">Interstellar</h3>
+                                </article>
+                                <article class="movie-card" data-id="m3" tabindex="0" role="listitem">
+                                    <div class="movie-card__poster">
+                                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Póster de Inception" loading="lazy">
+                                        <div class="movie-card__overlay"><button class="movie-card__play" aria-label="Reproducir Inception"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button></div>
+                                    </div>
+                                    <h3 class="movie-card__title">Inception</h3>
+                                </article>
+                                <article class="movie-card" data-id="m4" tabindex="0" role="listitem">
+                                    <div class="movie-card__poster">
+                                        <img src="https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Póster de Blade Runner 2049" loading="lazy">
+                                        <div class="movie-card__overlay"><button class="movie-card__play" aria-label="Reproducir Blade Runner 2049"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button></div>
+                                    </div>
+                                    <h3 class="movie-card__title">Blade Runner 2049</h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- PÁGINA 2: EXPLORAR CATÁLOGO -->
+        <section id="view-explore" class="view" style="display: none;" aria-label="Explorar Catálogo">
+            <div class="explore-header">
+                <div class="container">
+                    <h1 class="explore-header__title">Explorar Catálogo</h1>
+                    <form class="filters" aria-label="Filtros de búsqueda">
+                        <select class="filters__select" aria-label="Filtrar por tipo de contenido">
+                            <option value="all">Todo el contenido</option>
+                            <option value="movies">Películas</option>
+                            <option value="series">Series</option>
+                        </select>
+                        <select class="filters__select" aria-label="Filtrar por géneros">
+                            <option value="all">Todos los Géneros</option>
+                            <option value="action">Acción</option>
+                            <option value="scifi">Ciencia Ficción</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="container explore-grid" role="list">
+                <article class="movie-card" data-id="m12" tabindex="0" role="listitem">
+                    <div class="movie-card__poster">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Póster de Dune Parte Dos" loading="lazy">
+                        <div class="movie-card__overlay"><button class="movie-card__play" aria-label="Reproducir"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button></div>
+                    </div>
+                    <h3 class="movie-card__title">Dune: Parte Dos</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- PÁGINA 3: DETALLE DE TÍTULO -->
+        <section id="view-detail" class="view" style="display: none;" aria-label="Detalle de Título">
+            <div class="detail-hero">
+                <div class="detail-hero__background">
+                    <img src="" alt="Fondo de Título" class="detail-hero__bg-img">
+                    <div class="detail-hero__overlay"></div>
+                </div>
+                <div class="container detail-hero__content">
+                    <a href="#home" class="btn-back">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        Volver
+                    </a>
+                    <div class="detail-hero__grid">
+                        <div class="detail-hero__poster">
+                            <img src="" alt="Póster oficial">
+                        </div>
+                        <div class="detail-hero__info">
+                            <h1 class="detail-hero__title">Título</h1>
+                            <div class="detail-hero__meta">
+                                <span class="detail-hero__meta-item detail-hero__rating">13+</span>
+                            </div>
+                            <div class="detail-hero__actions">
+                                <button class="btn btn--primary">Reproducir</button>
+                                <button class="btn btn--secondary" id="detail-watchlist-btn">Mi Lista</button>
+                            </div>
+                            <div class="detail-hero__synopsis">
+                                <h2>Sinopsis</h2>
+                                <p>Cargando información...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 4: MI LISTA -->
+        <section id="view-mylist" class="view" style="display: none;" aria-label="Mi Lista de Favoritos">
+            <div class="explore-header">
+                <div class="container">
+                    <h1 class="explore-header__title">Mi Lista</h1>
+                    <p class="explore-header__subtitle">Tus películas y series guardadas para ver más tarde.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div id="mylist-grid" class="explore-grid" role="list" aria-live="polite"></div>
+                <div id="mylist-empty" class="mylist-empty" style="display: none;">
+                    <h2>Tu lista está vacía</h2>
+                    <p>Agrega películas y series a tu lista para verlas más tarde.</p>
+                    <a href="#explore" class="btn btn--primary" style="margin-top: var(--spacing-lg);">Explorar Catálogo</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT JS -->
+    <script src="app.js"></script>
+</body>
+</html>
