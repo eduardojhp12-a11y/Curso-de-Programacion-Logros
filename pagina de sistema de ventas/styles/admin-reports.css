@@ -1,0 +1,4 @@
+/* Se utilizan las clases base y de dashboard */
+.metric-card__value.u-text-success { color: var(--color-success); }
+.metric-card__value.u-text-danger { color: var(--color-danger); }
+.metric-card__value.u-text-primary { color: var(--color-primary-accent); }

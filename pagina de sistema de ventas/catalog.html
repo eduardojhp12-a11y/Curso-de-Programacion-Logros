@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - TechNova Store</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/catalog.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container u-flex-between">
+      <a href="index.html" class="header__logo" ondblclick="event.preventDefault(); window.location.href='login.html';">TechNova</a>
+      <nav class="header__nav">
+        <a href="index.html" class="header__link">Inicio</a>
+        <a href="catalog.html" class="header__link header__link--active">Catálogo</a>
+        <a href="cart.html" class="header__link">Carrito <span id="cart-count" class="header__badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container u-margin-bottom-6 catalog-layout">
+    <aside class="catalog-sidebar">
+      <div class="card">
+        <div class="card__header">
+          <h3>Filtros</h3>
+        </div>
+        <div class="card__body">
+          <div class="form-group">
+            <label class="form-label">Buscar</label>
+            <input type="text" id="search-input" class="form-control" placeholder="Buscar productos...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Categoría</label>
+            <select id="category-filter" class="form-control">
+              <option value="">Todas las categorías</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Disponibilidad</label>
+            <select id="stock-filter" class="form-control">
+              <option value="">Todos</option>
+              <option value="in-stock">En Stock</option>
+              <option value="out-of-stock">Agotado</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="catalog-content">
+      <div class="catalog-header u-flex-between u-margin-bottom-4">
+        <h2 id="catalog-title">Catálogo Completo</h2>
+        <div class="form-group" style="margin-bottom: 0;">
+          <select id="sort-filter" class="form-control">
+            <option value="relevance">Relevancia</option>
+            <option value="price-asc">Precio: Menor a Mayor</option>
+            <option value="price-desc">Precio: Mayor a Menor</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="catalog-grid">
+        <!-- Products injected via JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container u-text-center">
+      <p>&copy; 2026 TechNova Store.</p>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

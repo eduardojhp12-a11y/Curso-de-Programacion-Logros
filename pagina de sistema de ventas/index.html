@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda de Comercio Electrónico y ERP Integrado">
+  <title>Inicio - TechNova Store</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container u-flex-between">
+      <a href="index.html" class="header__logo" ondblclick="event.preventDefault(); window.location.href='login.html';">TechNova</a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="index.html" class="header__link header__link--active">Inicio</a>
+        <a href="catalog.html" class="header__link">Catálogo</a>
+        <a href="cart.html" class="header__link">Carrito <span id="cart-count" class="header__badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <h1 class="hero__title">Descubre la Nueva Era Tecnológica</h1>
+        <p class="hero__subtitle">Equipos premium, diseño excepcional y el mejor rendimiento para tu día a día.</p>
+        <a href="catalog.html" class="btn btn--primary hero__btn">Explorar Catálogo</a>
+      </div>
+    </section>
+
+    <section class="featured-categories u-margin-bottom-5">
+      <div class="container">
+        <h2 class="u-text-center">Categorías Principales</h2>
+        <div class="category-grid" id="category-container">
+          <!-- Categories injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products u-margin-bottom-5">
+      <div class="container">
+        <h2 class="u-text-center">Productos Destacados</h2>
+        <div class="product-grid" id="featured-products-container">
+          <!-- Products injected via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container u-text-center">
+      <p>&copy; 2026 TechNova Store. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

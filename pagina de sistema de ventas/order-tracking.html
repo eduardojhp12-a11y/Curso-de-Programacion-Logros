@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreo de Pedidos - TechNova Store</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/tracking.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container u-flex-between">
+      <a href="index.html" class="header__logo" ondblclick="event.preventDefault(); window.location.href='login.html';">TechNova</a>
+      <nav class="header__nav">
+        <a href="index.html" class="header__link">Inicio</a>
+        <a href="catalog.html" class="header__link">Catálogo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container u-margin-bottom-6">
+    <div class="tracking-container">
+      <h1 class="u-text-center u-margin-bottom-4">Rastrea tu Pedido</h1>
+      
+      <div class="card u-margin-bottom-4">
+        <div class="card__body u-flex u-flex-center">
+          <input type="text" id="order-id-input" class="form-control" placeholder="Ingresa tu ID de orden (ej: ord-...)" style="width: 300px; margin-right: 16px;">
+          <button id="track-btn" class="btn btn--primary">Rastrear</button>
+        </div>
+      </div>
+
+      <div id="tracking-result" class="u-hidden">
+        <div class="card">
+          <div class="card__header">
+            <h3 id="order-title">Estado del Pedido: ---</h3>
+          </div>
+          <div class="card__body">
+            <div class="timeline" id="timeline">
+              <!-- Timeline JS injected -->
+            </div>
+            
+            <div class="u-margin-top-4">
+              <h4>Detalles</h4>
+              <p class="u-text-muted" id="order-date"></p>
+              <p class="u-text-muted" id="order-total"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="js/db.js"></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>

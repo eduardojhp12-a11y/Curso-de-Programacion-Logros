@@ -1,0 +1,21 @@
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.catalog-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+@media (max-width: 768px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+  .catalog-sidebar {
+    position: static;
+  }
+}

@@ -1,0 +1,186 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-3xl); margin-bottom: var(--space-4); }
+h2 { font-size: var(--font-2xl); margin-bottom: var(--space-3); }
+h3 { font-size: var(--font-xl); margin-bottom: var(--space-3); }
+h4 { font-size: var(--font-lg); margin-bottom: var(--space-2); }
+p { font-size: var(--font-base); margin-bottom: var(--space-3); color: var(--color-text-muted); }
+small { font-size: var(--font-sm); }
+
+a {
+  color: var(--color-primary-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Utilities */
+.u-text-center { text-align: center; }
+.u-text-right { text-align: right; }
+.u-text-muted { color: var(--color-text-muted); }
+.u-text-success { color: var(--color-success); }
+.u-text-warning { color: var(--color-warning); }
+.u-text-danger { color: var(--color-danger); }
+.u-margin-bottom-3 { margin-bottom: var(--space-3); }
+.u-margin-bottom-4 { margin-bottom: var(--space-4); }
+.u-margin-bottom-5 { margin-bottom: var(--space-5); }
+.u-flex { display: flex; }
+.u-flex-column { flex-direction: column; }
+.u-flex-center { align-items: center; justify-content: center; }
+.u-flex-between { align-items: center; justify-content: space-between; }
+.u-hidden { display: none !important; }
+
+/* Components - Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-base);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--color-primary-accent);
+  color: var(--color-surface);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-primary-accent);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-primary-accent);
+  color: var(--color-primary-accent);
+}
+
+.btn--danger {
+  background-color: var(--color-danger);
+  color: var(--color-surface);
+}
+
+.btn--danger:hover {
+  filter: brightness(90%);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* Components - Forms */
+.form-group {
+  margin-bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  color: var(--color-primary);
+}
+
+.form-control {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-base);
+  font-family: var(--font-family);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Components - Cards */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__header {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card__body {
+  padding: var(--space-4);
+}
+
+.card__footer {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-main);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}

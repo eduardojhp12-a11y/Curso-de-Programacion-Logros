@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - TechNova Store</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container u-flex-center">
+      <a href="index.html" class="header__logo" ondblclick="event.preventDefault(); window.location.href='login.html';">TechNova - Finalizar Compra</a>
+    </div>
+  </header>
+
+  <main class="container u-margin-bottom-6">
+    <div class="checkout-layout">
+      <form id="checkout-form" class="checkout-form">
+        <div class="card u-margin-bottom-4">
+          <div class="card__header">
+            <h3>Datos Personales y de Envío</h3>
+          </div>
+          <div class="card__body">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Nombre</label>
+                <input type="text" id="fname" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Apellidos</label>
+                <input type="text" id="lname" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correo Electrónico</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dirección Completa</label>
+              <input type="text" id="address" class="form-control" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Ciudad</label>
+                <input type="text" id="city" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Código Postal</label>
+                <input type="text" id="zip" class="form-control" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <h3>Método de Pago</h3>
+          </div>
+          <div class="card__body">
+            <div class="form-group">
+              <label class="form-label">
+                <input type="radio" name="payment" value="Tarjeta de Crédito" checked> Tarjeta de Crédito
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                <input type="radio" name="payment" value="PayPal"> PayPal
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="checkout-summary card">
+        <div class="card__header">
+          <h3>Resumen de la Orden</h3>
+        </div>
+        <div class="card__body" id="checkout-items">
+          <!-- Items here -->
+        </div>
+        <div class="card__footer">
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="chk-subtotal">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Impuestos (21%)</span>
+            <span id="chk-tax">$0.00</span>
+          </div>
+          <div class="summary-line summary-total">
+            <span>Total</span>
+            <span id="chk-total">$0.00</span>
+          </div>
+          <button type="submit" form="checkout-form" class="btn btn--primary btn--block u-margin-top-3">Confirmar Pedido</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="js/db.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

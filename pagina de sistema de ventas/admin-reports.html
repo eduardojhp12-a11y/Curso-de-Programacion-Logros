@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes - TechNova ERP</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/admin-dashboard.css">
+  <link rel="stylesheet" href="styles/admin-reports.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <h2>TechNova ERP</h2>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="admin-dashboard.html" class="sidebar__link">Dashboard</a>
+        <a href="admin-inventory.html" class="sidebar__link">Inventario</a>
+        <a href="admin-orders.html" class="sidebar__link">Órdenes</a>
+        <a href="admin-reports.html" class="sidebar__link sidebar__link--active">Reportes</a>
+        <a href="index.html" class="sidebar__link" style="margin-top: auto;">Volver a Tienda</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header u-flex-between">
+        <h1>Reportes y Análisis</h1>
+        <button id="export-db" class="btn btn--primary">Exportar Base de Datos</button>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="card u-margin-bottom-4">
+          <div class="card__header">
+            <h3>Balance General</h3>
+          </div>
+          <div class="card__body">
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <h3 class="metric-card__title">Ingresos Brutos</h3>
+                <p class="metric-card__value u-text-success" id="rep-revenue">$0.00</p>
+              </div>
+              <div class="metric-card">
+                <h3 class="metric-card__title">Costo de Mercancía</h3>
+                <p class="metric-card__value u-text-danger" id="rep-cost">$0.00</p>
+              </div>
+              <div class="metric-card">
+                <h3 class="metric-card__title">Margen de Beneficio</h3>
+                <p class="metric-card__value u-text-primary" id="rep-margin">$0.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <h3>Top 5 Productos Más Vendidos</h3>
+          </div>
+          <div class="card__body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Unidades Vendidas</th>
+                    <th>Ingresos Generados</th>
+                  </tr>
+                </thead>
+                <tbody id="top-products-table">
+                  <!-- JS Injected -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/db.js"></script>
+  <script src="js/admin-reports.js"></script>
+</body>
+</html>

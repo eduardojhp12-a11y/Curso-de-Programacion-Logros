@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Producto - TechNova Store</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/product.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container u-flex-between">
+      <a href="index.html" class="header__logo" ondblclick="event.preventDefault(); window.location.href='login.html';">TechNova</a>
+      <nav class="header__nav">
+        <a href="index.html" class="header__link">Inicio</a>
+        <a href="catalog.html" class="header__link">Catálogo</a>
+        <a href="cart.html" class="header__link">Carrito <span id="cart-count" class="header__badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container u-margin-bottom-6">
+    <div id="product-container" class="product-detail-layout">
+      <!-- Injected via JS -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container u-text-center">
+      <p>&copy; 2026 TechNova Store.</p>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

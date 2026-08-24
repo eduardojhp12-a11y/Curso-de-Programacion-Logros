@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - TechNova ERP</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/admin-dashboard.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <h2>TechNova ERP</h2>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="admin-dashboard.html" class="sidebar__link sidebar__link--active">Dashboard</a>
+        <a href="admin-inventory.html" class="sidebar__link">Inventario</a>
+        <a href="admin-orders.html" class="sidebar__link">Órdenes</a>
+        <a href="admin-reports.html" class="sidebar__link">Reportes</a>
+        <a href="index.html" class="sidebar__link" style="margin-top: auto;">Volver a Tienda</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header u-flex-between">
+        <h1>Dashboard Principal</h1>
+        <div class="user-profile">Admin Usuario</div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <h3 class="metric-card__title">Ingresos Totales</h3>
+            <p class="metric-card__value" id="metric-revenue">$0.00</p>
+          </div>
+          <div class="metric-card">
+            <h3 class="metric-card__title">Pedidos Totales</h3>
+            <p class="metric-card__value" id="metric-orders">0</p>
+          </div>
+          <div class="metric-card">
+            <h3 class="metric-card__title">Ticket Promedio</h3>
+            <p class="metric-card__value" id="metric-ticket">$0.00</p>
+          </div>
+          <div class="metric-card metric-card--warning">
+            <h3 class="metric-card__title">Alertas de Stock</h3>
+            <p class="metric-card__value" id="metric-stock">0</p>
+          </div>
+        </div>
+
+        <div class="dashboard-charts u-margin-top-5">
+          <div class="card">
+            <div class="card__header">
+              <h3>Últimas Transacciones</h3>
+            </div>
+            <div class="card__body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID Orden</th>
+                      <th>Fecha</th>
+                      <th>Cliente</th>
+                      <th>Total</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody id="recent-orders-table">
+                    <!-- JS Injected -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/db.js"></script>
+  <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
