@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenido a Posada El Retiro, su refugio de relajación y hospitalidad boutique en medio de la naturaleza. Reserve su estancia hoy.">
+    <title>Inicio | Posada El Retiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="navbar__logo-icon" aria-hidden="true"><path d="M2 20h20"/><path d="M5 20V9l7-6 7 6v11"/><path d="M9 20v-6h6v6"/></svg>
+                El Retiro
+            </a>
+            <nav class="navbar__nav" id="navbar-menu">
+                <ul class="navbar__list">
+                    <li><a href="index.html" class="navbar__link navbar__link--active" aria-current="page">Inicio</a></li>
+                    <li><a href="habitaciones.html" class="navbar__link">Habitaciones</a></li>
+                    <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+                    <li><a href="reservas.html" class="navbar__link navbar__link--cta">Reservar Ahora</a></li>
+                </ul>
+            </nav>
+            <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar-menu" id="navbar-toggle">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero__overlay">
+                <div class="container hero__content">
+                    <h1 id="hero-heading" class="hero__title">Descubra la Verdadera Tranquilidad</h1>
+                    <p class="hero__subtitle">Un refugio boutique diseñado para desconectar del ruido y reconectar con la naturaleza.</p>
+                    <a href="reservas.html" class="btn btn--accent hero__cta">Ver Disponibilidad</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentación de la Posada -->
+        <section class="about section" aria-labelledby="about-heading">
+            <div class="container about__container">
+                <div class="about__text-content">
+                    <h2 id="about-heading" class="section-title">Nuestra Filosofía</h2>
+                    <p class="about__description">En Posada El Retiro, creemos que el verdadero lujo reside en el tiempo y el espacio. Hemos creado un ambiente íntimo donde cada detalle está pensado para brindarle una experiencia de descanso absoluto. Rodeados de exuberante vegetación y con un servicio personalizado, le invitamos a sentirse como en casa, pero lejos de las preocupaciones cotidianas.</p>
+                    <p class="about__description">Nuestras instalaciones combinan el encanto rústico con las comodidades modernas, ofreciendo el equilibrio perfecto para su escapada romántica o retiro personal.</p>
+                    <a href="servicios.html" class="btn about__btn">Conozca Nuestros Servicios</a>
+                </div>
+                <div class="about__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542314831-c6a420325160?auto=format&fit=crop&w=800&q=80" alt="Vista exterior de la posada con piscina y jardín tropical" class="about__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Habitaciones Destacadas -->
+        <section class="featured-rooms section bg-light" aria-labelledby="rooms-heading">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="rooms-heading" class="section-title">Nuestras Habitaciones</h2>
+                    <p class="section-subtitle">Espacios diseñados para el máximo confort y privacidad.</p>
+                </div>
+                
+                <div class="room-grid">
+                    <!-- Habitación 1 -->
+                    <article class="room-card">
+                        <div class="room-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="Suite Panorámica con cama king size y terraza" class="room-card__image">
+                            <span class="room-card__price">$150 / noche</span>
+                        </div>
+                        <div class="room-card__content">
+                            <h3 class="room-card__title">Suite Panorámica</h3>
+                            <p class="room-card__description">Nuestra habitación más exclusiva, con amplios ventanales que ofrecen vistas ininterrumpidas al bosque y terraza privada para el máximo relax.</p>
+                            <ul class="room-card__amenities" aria-label="Amenidades">
+                                <li class="room-card__amenity">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                    WiFi Alta Velocidad
+                                </li>
+                                <li class="room-card__amenity">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20v-5.5a2.5 2.5 0 0 1 5 0V20"/><path d="M7 20v-5a5 5 0 0 1 10 0v5"/><path d="M3 20h18"/><path d="M12 4v4"/></svg>
+                                    Aire Acondicionado
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Habitación 2 -->
+                    <article class="room-card">
+                        <div class="room-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" alt="Habitación Deluxe con acceso a los jardines" class="room-card__image">
+                            <span class="room-card__price">$110 / noche</span>
+                        </div>
+                        <div class="room-card__content">
+                            <h3 class="room-card__title">Deluxe Jardín</h3>
+                            <p class="room-card__description">Espaciosa y luminosa, esta habitación cuenta con acceso directo a nuestros jardines principales, un balcón privado y un baño tipo spa.</p>
+                            <ul class="room-card__amenities" aria-label="Amenidades">
+                                <li class="room-card__amenity">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                    WiFi Alta Velocidad
+                                </li>
+                                <li class="room-card__amenity">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20"/><path d="M5 20V9l7-6 7 6v11"/><path d="M9 20v-6h6v6"/></svg>
+                                    Cama King Size
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Habitación 3 -->
+                    <article class="room-card">
+                        <div class="room-card__image-container">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c894e4dc240e?auto=format&fit=crop&w=600&q=80" alt="Habitación Clásica interior" class="room-card__image">
+                            <span class="room-card__price">$85 / noche</span>
+                        </div>
+                        <div class="room-card__content">
+                            <h3 class="room-card__title">Clásica Acogedora</h3>
+                            <p class="room-card__description">Perfecta para estancias cortas o viajeros solos. Ofrece todo el confort característico de nuestro hotel en un ambiente íntimo y excepcionalmente cálido.</p>
+                            <ul class="room-card__amenities" aria-label="Amenidades">
+                                <li class="room-card__amenity">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                    WiFi Alta Velocidad
+                                </li>
+                                <li class="room-card__amenity">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    Room Service 24h
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--spacing-xl);">
+                    <a href="habitaciones.html" class="btn">Ver Todas las Habitaciones</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="testimonials section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="testimonials-heading" class="section-title">Lo que dicen nuestros huéspedes</h2>
+                </div>
+                
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
+                        <span class="sr-only">Valoración de 5 estrellas</span>
+                        <p class="testimonial-card__quote">"Un fin de semana inolvidable. La atención al detalle es impecable y la paz que se respira en el entorno nos renovó por completo. Definitivamente volveremos para nuestro aniversario."</p>
+                        <footer class="testimonial-card__author">- Elena y Marcos T.</footer>
+                    </article>
+                    
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
+                        <span class="sr-only">Valoración de 5 estrellas</span>
+                        <p class="testimonial-card__quote">"El desayuno servido en la terraza de la suite fue un sueño. Recomiendo altamente la Suite Panorámica para celebrar ocasiones especiales. Una joya escondida de la que no quieres irte."</p>
+                        <footer class="testimonial-card__author">- Roberto G.</footer>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
+                        <span class="sr-only">Valoración de 5 estrellas</span>
+                        <p class="testimonial-card__quote">"Escapamos del estrés de la ciudad y encontramos exactamente lo que buscábamos. El personal es amable, profesional y siempre dispuesto a ayudar. Un 10/10 en absolutamente todo."</p>
+                        <footer class="testimonial-card__author">- Sofía M.</footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Posada El Retiro</h3>
+                    <p class="footer__text">Su refugio boutique de descanso y reconexión con la naturaleza. Lejos del ruido, cerca de la paz absoluta.</p>
+                </div>
+                <nav class="footer__col" aria-label="Enlaces del pie de página">
+                    <h3 class="footer__col-title">Enlaces Rápidos</h3>
+                    <ul class="footer__list">
+                        <li><a href="index.html" class="footer__link">Inicio</a></li>
+                        <li><a href="habitaciones.html" class="footer__link">Habitaciones</a></li>
+                        <li><a href="servicios.html" class="footer__link">Servicios</a></li>
+                        <li><a href="reservas.html" class="footer__link">Reservas</a></li>
+                    </ul>
+                </nav>
+                <address class="footer__col" style="font-style: normal;">
+                    <h3 class="footer__col-title">Contacto</h3>
+                    <div class="footer__contact-item">
+                        <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Camino del Bosque, Km 4.5<br>Valle Sereno</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg class="footer__contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>reservas@elretiro.com</span>
+                    </div>
+                </address>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="current-year"></span> Posada El Retiro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+    <script>
+        // Lógica para el año actual en el footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Lógica básica para el Navbar Mobile
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+        
+        navbarToggle.addEventListener('click', () => {
+            const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+            navbarToggle.setAttribute('aria-expanded', !isExpanded);
+            navbarMenu.classList.toggle('navbar__nav--open');
+        });
+    </script>
+</body>
+</html>

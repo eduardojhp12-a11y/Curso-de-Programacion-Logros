@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haz una donación a Fundación Esperanza. Tu contribución nos permite continuar nuestros proyectos de educación, salud y nutrición.">
+    <title>Donar | Fundación Esperanza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav__logo" aria-label="Inicio">Fundación Esperanza</a>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li><a href="voluntariado.html" class="nav__link">Voluntariado</a></li>
+                    <li><a href="transparencia.html" class="nav__link">Transparencia</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="aliados.html" class="nav__link">Aliados</a></li>
+                    <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                    <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    <li><a href="donar.html" class="btn btn--secondary" aria-label="Donar ahora">Donar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content page-donar bg-light">
+        <section class="section">
+            <div class="container">
+                <div class="donation-wrapper">
+                    
+                    <div class="donation-info">
+                        <h1 class="section__title">Tu Generosidad Cambia Vidas</h1>
+                        <p class="donation-info__desc">Cada aporte, sin importar su tamaño, nos acerca un paso más a un mundo donde todas las personas tienen igualdad de oportunidades. Tu donación es 100% segura y deducible de impuestos.</p>
+                        
+                        <div class="impact-calculator">
+                            <h3>¿Qué logra tu donación?</h3>
+                            <div class="impact-result" id="impactResult">
+                                Selecciona un monto para ver tu impacto directo.
+                            </div>
+                        </div>
+
+                        <div class="secure-badge">
+                            🔒 Donación segura encriptada (Simulación)
+                        </div>
+                    </div>
+
+                    <div class="donation-form-container">
+                        <form id="donationForm" class="donation-form">
+                            <!-- Tipo de donación -->
+                            <div class="form-group">
+                                <label class="form-label">Tipo de Donación</label>
+                                <div class="btn-group" id="donationTypeGroup">
+                                    <button type="button" class="btn-toggle active" data-type="unica">Única</button>
+                                    <button type="button" class="btn-toggle" data-type="mensual">Mensual</button>
+                                </div>
+                                <input type="hidden" id="donationType" name="donationType" value="unica">
+                            </div>
+
+                            <!-- Monto -->
+                            <div class="form-group">
+                                <label class="form-label">Selecciona el monto (USD)</label>
+                                <div class="amount-grid" id="amountGrid">
+                                    <button type="button" class="btn-amount" data-amount="20">$20</button>
+                                    <button type="button" class="btn-amount active" data-amount="50">$50</button>
+                                    <button type="button" class="btn-amount" data-amount="100">$100</button>
+                                    <button type="button" class="btn-amount" data-amount="250">$250</button>
+                                </div>
+                                <div class="custom-amount-wrapper">
+                                    <span class="currency-symbol">$</span>
+                                    <input type="number" id="customAmount" class="form-input custom-amount" placeholder="Otro monto" min="5">
+                                </div>
+                                <input type="hidden" id="finalAmount" name="finalAmount" value="50">
+                            </div>
+
+                            <hr class="form-divider">
+
+                            <!-- Datos Personales -->
+                            <h3 class="form-subtitle">Información Personal</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">Nombre *</label>
+                                    <input type="text" id="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Apellido *</label>
+                                    <input type="text" id="lastName" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Correo Electrónico *</label>
+                                <input type="email" id="email" class="form-input" required>
+                            </div>
+
+                            <!-- Datos de Pago -->
+                            <h3 class="form-subtitle">Información de Pago (Simulada)</h3>
+                            <div class="form-group">
+                                <label for="cardNumber" class="form-label">Número de Tarjeta *</label>
+                                <input type="text" id="cardNumber" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry" class="form-label">Vencimiento (MM/AA) *</label>
+                                    <input type="text" id="expiry" class="form-input" placeholder="MM/AA" maxlength="5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv" class="form-label">CVV *</label>
+                                    <input type="text" id="cvv" class="form-input" placeholder="123" maxlength="4" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn--secondary btn--full btn--submit">Completar Donación de $<span id="submitBtnAmount">50</span></button>
+                            
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__heading">Fundación Esperanza</h3>
+                    <p class="footer__text">Impulsando el cambio social y brindando oportunidades a quienes más lo necesitan. Tu apoyo hace la diferencia.</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__heading">Enlaces Rápidos</h3>
+                    <ul aria-label="Enlaces del pie de página">
+                        <li><a href="nosotros.html" class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="proyectos.html" class="footer__link">Nuestros Proyectos</a></li>
+                        <li><a href="transparencia.html" class="footer__link">Informes Financieros</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contáctanos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <p class="footer__text">
+                        📍 Av. de la Solidaridad 123, Ciudad<br>
+                        📞 +1 234 567 8900<br>
+                        ✉️ hola@fundacionesperanza.org
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 Fundación Esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

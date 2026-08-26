@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre nuestro nuevo producto digital que transformará tu forma de trabajar. Únete a la lista de espera exclusiva.">
+    <title>Lanzamiento Exclusivo - Revoluciona tu Productividad</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+    <main class="page__main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">Multiplica tu Productividad sin Trabajar Más Horas</h1>
+                    <p class="hero__subtitle">El primer sistema inteligente diseñado para automatizar tus tareas repetitivas y liberar hasta 15 horas de tu semana. Sé uno de los primeros en experimentar el cambio.</p>
+                </div>
+                <div class="hero__form-wrapper">
+                    <form id="lead-form" class="lead-form" aria-label="Formulario de registro para acceso anticipado" novalidate>
+                        <h2 class="lead-form__title">Asegura tu Acceso Anticipado</h2>
+                        <div class="lead-form__group">
+                            <label for="name" class="lead-form__label">Nombre completo</label>
+                            <input type="text" id="name" name="name" class="lead-form__input" placeholder="Ej. Juan Pérez" required aria-required="true">
+                            <span class="lead-form__error" id="name-error" aria-live="polite"></span>
+                        </div>
+                        <div class="lead-form__group">
+                            <label for="email" class="lead-form__label">Correo electrónico</label>
+                            <input type="email" id="email" name="email" class="lead-form__input" placeholder="tu@correo.com" required aria-required="true">
+                            <span class="lead-form__error" id="email-error" aria-live="polite"></span>
+                        </div>
+                        <button type="submit" class="lead-form__submit-btn">Quiero mi Acceso</button>
+                        <p class="lead-form__privacy-note">Tu información está 100% segura con nosotros.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Beneficios -->
+        <section class="benefits" aria-labelledby="benefits-title">
+            <div class="benefits__container">
+                <h2 id="benefits-title" class="benefits__title">¿Por qué este sistema cambiará tu rutina?</h2>
+                <div class="benefits__grid">
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">
+                            <!-- Icono de Reloj -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-card__title">Ahorro de Tiempo Radical</h3>
+                        <p class="benefit-card__description">Automatiza procesos diarios que consumen horas de tu día, permitiéndote enfocarte en lo que realmente importa.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">
+                            <!-- Icono de Check / Escudo -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-card__title">Precisión Milimétrica</h3>
+                        <p class="benefit-card__description">Elimina el error humano. Nuestro sistema ejecuta cada tarea con un nivel de exactitud impecable, sin importar la cantidad de datos.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">
+                            <!-- Icono de Gráfico -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-card__title">Crecimiento Escalable</h3>
+                        <p class="benefit-card__description">Diseñado para crecer contigo. A medida que tu volumen de trabajo aumenta, el sistema se adapta sin fricciones ni sobrecostos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prueba Social -->
+        <section class="social-proof" aria-labelledby="social-proof-title">
+            <div class="social-proof__container">
+                <h2 id="social-proof-title" class="social-proof__title">Lo que dicen nuestros primeros usuarios</h2>
+                <div class="social-proof__grid">
+                    <blockquote class="testimonial">
+                        <p class="testimonial__quote">"Desde que integré esta herramienta en nuestro equipo, he podido recuperar mis fines de semana. Es increíble lo intuitivo y potente que resulta para el día a día."</p>
+                        <footer class="testimonial__author">
+                            <strong class="testimonial__name">Laura Gómez</strong>
+                            <span class="testimonial__role">Directora de Marketing</span>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p class="testimonial__quote">"Simplemente brillante. La curva de aprendizaje es mínima y los resultados en eficiencia se notan desde el primer día de uso. Lo recomiendo totalmente."</p>
+                        <footer class="testimonial__author">
+                            <strong class="testimonial__name">Carlos Mendoza</strong>
+                            <span class="testimonial__role">Fundador de TechStart</span>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Minimalista -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">&copy; 2026 Innovación Digital. Todos los derechos reservados.</p>
+            <nav class="footer__nav" aria-label="Enlaces legales">
+                <ul class="footer__links">
+                    <li class="footer__link-item"><a href="#" class="footer__link">Política de Privacidad</a></li>
+                    <li class="footer__link-item"><a href="#" class="footer__link">Términos de Servicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

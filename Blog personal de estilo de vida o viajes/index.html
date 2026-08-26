@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tierra y Viento | Lifestyle & Travel</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal irá aquí -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__image" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+      <div class="hero__content">
+        <div class="container">
+          <h1 class="hero__title">Descubre el mundo con intención</h1>
+          <p class="hero__subtitle">Historias de viaje, fotografía y estilo de vida consciente para el alma nómada.</p>
+          <a href="destinos.html" class="btn btn--primary">Explorar Destinos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artículos Recientes -->
+    <section class="recent-posts section-padding">
+      <div class="container">
+        <h2 class="section-title">Aventuras Recientes</h2>
+        <div class="grid-cards">
+          <!-- Tarjeta 1 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Medina de Marrakech" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Marruecos</span>
+              <h3 class="card__title"><a href="post.html">Perdiéndose en los colores de la Medina de Marrakech</a></h3>
+              <p class="card__excerpt">Una guía sensorial a través de los zocos, especias y la vibrante cultura del corazón de Marruecos.</p>
+              <div class="card__meta">
+                <span class="card__date">12 Ago, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="1">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta 2 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Calle de París" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Francia</span>
+              <h3 class="card__title"><a href="post.html">Un fin de semana bohemio en Montmartre</a></h3>
+              <p class="card__excerpt">Cafés escondidos, arte callejero y la magia inagotable del barrio más romántico de París.</p>
+              <div class="card__meta">
+                <span class="card__date">05 Ago, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="2">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta 3 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1504280741564-c6a6f11cb202?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Montañas de Patagonia" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Argentina</span>
+              <h3 class="card__title"><a href="post.html">Guía de Trekking en la Patagonia: El Chaltén</a></h3>
+              <p class="card__excerpt">Todo lo que necesitas saber para prepararte para los senderos más imponentes del fin del mundo.</p>
+              <div class="card__meta">
+                <span class="card__date">28 Jul, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="3">🔖</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinos Populares -->
+    <section class="popular-destinations section-padding bg-light">
+      <div class="container">
+        <h2 class="section-title">Destinos Populares</h2>
+        <div class="destinations-grid">
+          <a href="destinos.html?continent=asia" class="destination-card">
+            <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Asia" class="destination-card__img">
+            <h3 class="destination-card__title">Asia</h3>
+          </a>
+          <a href="destinos.html?continent=europa" class="destination-card">
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Europa" class="destination-card__img">
+            <h3 class="destination-card__title">Europa</h3>
+          </a>
+          <a href="destinos.html?continent=america" class="destination-card">
+            <img src="https://images.unsplash.com/photo-1518182170546-076616fd4603?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="América" class="destination-card__img">
+            <h3 class="destination-card__title">América</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3 class="footer__title">Tierra y Viento</h3>
+          <p class="footer__description">Explorando el mundo a través de historias, fotografías y guías prácticas para nómadas y amantes del estilo de vida consciente.</p>
+        </div>
+        
+        <div class="footer__links">
+          <h4 class="footer__links-title">Enlaces Legales</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__newsletter">
+          <h4 class="footer__links-title">Únete a la Aventura</h4>
+          <p class="footer__description">Recibe nuestras mejores historias y guías directamente en tu correo.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter__button">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Tierra y Viento. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+

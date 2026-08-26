@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="header__logo">AnimeStream</a>
+                <h1 class="auth-title">Crea tu cuenta</h1>
+                <p class="auth-subtitle">Únete a la comunidad de anime más grande.</p>
+            </div>
+            
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Nombre de Usuario</label>
+                    <input type="text" id="username" class="form-input" placeholder="Tu alias Otaku">
+                    <span class="form-error" id="username-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-input" placeholder="ejemplo@correo.com">
+                    <span class="form-error" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" class="form-input" placeholder="Mínimo 8 caracteres">
+                    <span class="form-error" id="password-error"></span>
+                </div>
+                
+                <button type="submit" class="btn btn--primary auth-btn">Registrarse</button>
+            </form>
+            
+            <p class="auth-footer">
+                ¿Ya tienes cuenta? <a href="login.html" class="auth-link">Inicia sesión</a>
+            </p>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

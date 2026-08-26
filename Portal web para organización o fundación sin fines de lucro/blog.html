@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias, historias de impacto y novedades de Fundación Esperanza. Mantente informado sobre nuestras acciones.">
+    <title>Blog y Noticias | Fundación Esperanza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav__logo" aria-label="Inicio">Fundación Esperanza</a>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li><a href="voluntariado.html" class="nav__link">Voluntariado</a></li>
+                    <li><a href="transparencia.html" class="nav__link">Transparencia</a></li>
+                    <li><a href="blog.html" class="nav__link" aria-current="page">Blog</a></li>
+                    <li><a href="aliados.html" class="nav__link">Aliados</a></li>
+                    <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                    <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    <li><a href="donar.html" class="btn btn--secondary" aria-label="Donar ahora">Donar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1 class="page-hero__title">Noticias e Historias de Impacto</h1>
+                <p class="page-hero__subtitle">Descubre cómo estamos cambiando el mundo, un paso a la vez.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Buscador Visual -->
+                <div class="search-bar-container">
+                    <form class="search-form" onsubmit="event.preventDefault();">
+                        <input type="text" class="form-input search-input" placeholder="Buscar noticias, proyectos...">
+                        <button class="btn btn--primary" type="button">Buscar</button>
+                    </form>
+                    <div class="categories">
+                        <span class="category-tag active">Todos</span>
+                        <span class="category-tag">Educación</span>
+                        <span class="category-tag">Salud</span>
+                        <span class="category-tag">Eventos</span>
+                    </div>
+                </div>
+
+                <!-- Cuadrícula de Artículos -->
+                <div class="blog-grid mt-lg">
+                    <article class="blog-card">
+                        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>📅 15 Ago, 2026</span>
+                                <span>📂 Educación</span>
+                            </div>
+                            <h3 class="blog-title">Inauguramos nueva biblioteca rural</h3>
+                            <p class="blog-excerpt">Con alegría anunciamos la apertura de la biblioteca en la comunidad de San Juan, que beneficiará a más de 300 estudiantes...</p>
+                            <a href="#" class="blog-link">Leer más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>📅 02 Ago, 2026</span>
+                                <span>📂 Salud</span>
+                            </div>
+                            <h3 class="blog-title">Éxito en la Jornada de Vacunación</h3>
+                            <p class="blog-excerpt">La clínica móvil logró atender a más de 500 niños durante el fin de semana, asegurando el esquema básico de vacunación...</p>
+                            <a href="#" class="blog-link">Leer más &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1593113565694-c8c83a54b42b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>📅 20 Jul, 2026</span>
+                                <span>📂 Eventos</span>
+                            </div>
+                            <h3 class="blog-title">Gala de Recaudación Anual 2026</h3>
+                            <p class="blog-excerpt">Agradecemos profundamente a todos los aliados y donantes que hicieron posible alcanzar nuestra meta en la gala anual...</p>
+                            <a href="#" class="blog-link">Leer más &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__heading">Fundación Esperanza</h3>
+                    <p class="footer__text">Impulsando el cambio social y brindando oportunidades a quienes más lo necesitan. Tu apoyo hace la diferencia.</p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Enlaces Rápidos</h3>
+                    <ul aria-label="Enlaces del pie de página">
+                        <li><a href="nosotros.html" class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="proyectos.html" class="footer__link">Nuestros Proyectos</a></li>
+                        <li><a href="transparencia.html" class="footer__link">Informes Financieros</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <p class="footer__text">
+                        📍 Av. de la Solidaridad 123, Ciudad<br>
+                        📞 +1 234 567 8900<br>
+                        ✉️ hola@fundacionesperanza.org
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Fundación Esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

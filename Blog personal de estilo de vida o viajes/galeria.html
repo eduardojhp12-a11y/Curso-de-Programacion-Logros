@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Visual - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="gallery section-padding">
+      <div class="container">
+        <h1 class="section-title">Galería Visual</h1>
+        <p class="hero__subtitle" style="color: var(--color-text-main); text-align: center; margin-bottom: var(--space-4);">Momentos capturados a través del lente. Un viaje visual por el mundo.</p>
+
+        <div class="masonry-grid">
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="París">
+          </div>
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Paisaje">
+          </div>
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Marruecos">
+          </div>
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1504280741564-c6a6f11cb202?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700&q=80" alt="Patagonia">
+          </div>
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Japón">
+          </div>
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900&q=80" alt="Especias">
+          </div>
+          <div class="masonry-item">
+            <img src="https://images.unsplash.com/photo-1515542622106-78b28af7815d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Roma">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3 class="footer__title">Tierra y Viento</h3>
+          <p class="footer__description">Explorando el mundo a través de historias, fotografías y guías prácticas para nómadas y amantes del estilo de vida consciente.</p>
+        </div>
+        
+        <div class="footer__links">
+          <h4 class="footer__links-title">Enlaces Legales</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__newsletter">
+          <h4 class="footer__links-title">Únete a la Aventura</h4>
+          <p class="footer__description">Recibe nuestras mejores historias y guías directamente en tu correo.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter__button">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Tierra y Viento. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+

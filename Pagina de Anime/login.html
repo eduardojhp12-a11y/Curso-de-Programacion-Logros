@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="header__logo">AnimeStream</a>
+                <h1 class="auth-title">Bienvenido de nuevo</h1>
+                <p class="auth-subtitle">Inicia sesión para continuar viendo.</p>
+            </div>
+            
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-input" placeholder="ejemplo@correo.com">
+                    <span class="form-error" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••">
+                    <span class="form-error" id="password-error"></span>
+                </div>
+                
+                <div class="form-actions">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Recordarme
+                    </label>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <button type="submit" class="btn btn--primary auth-btn">Iniciar Sesión</button>
+            </form>
+            
+            <p class="auth-footer">
+                ¿No tienes cuenta? <a href="register.html" class="auth-link">Regístrate aquí</a>
+            </p>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

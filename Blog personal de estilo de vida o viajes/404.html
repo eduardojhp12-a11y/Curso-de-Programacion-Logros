@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="error-page container">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-message">¡Vaya! Parece que te has desviado de la ruta.</h2>
+      <p style="margin-bottom: var(--space-4); max-width: 500px; opacity: 0.8;">La página que estás buscando no existe, ha sido movida o está fuera del mapa. Pero no te preocupes, perderse a veces es el comienzo de una gran aventura.</p>
+      
+      <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center;">
+        <a href="index.html" class="btn btn--primary">Volver al Inicio</a>
+        <a href="post.html" class="btn" style="background-color: var(--color-bg-card); border: 1px solid #ddd;">Leer un artículo al azar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">...</footer>
+<script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Directorio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="index.html">AnimeStream</a>
+            </div>
+            <div class="header__search">
+                <input type="text" placeholder="Buscar anime...">
+            </div>
+            <ul class="header__menu">
+                <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+                <li class="header__item"><a href="directorio.html" class="header__link header__link--active">Directorio</a></li>
+                <li class="header__item"><a href="calendario.html" class="header__link">Calendario</a></li>
+                <li class="header__item"><a href="noticias.html" class="header__link">Noticias</a></li>
+            </ul>
+            <div class="header__actions">
+                <a href="watchlist.html" class="header__icon">Mi Lista</a>
+                <a href="login.html" class="header__btn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main directory-container">
+        <aside class="filters">
+            <h2 class="filters__title">Filtros</h2>
+            <form id="filter-form" class="filters__form">
+                <div class="filters__group">
+                    <label class="filters__label" for="search">Buscar</label>
+                    <input type="text" id="search" class="filters__input" placeholder="Nombre del anime...">
+                </div>
+                
+                <div class="filters__group">
+                    <label class="filters__label" for="genre">Género</label>
+                    <select id="genre" class="filters__select">
+                        <option value="all">Todos los géneros</option>
+                        <option value="shonen">Shonen</option>
+                        <option value="seinen">Seinen</option>
+                        <option value="isekai">Isekai</option>
+                        <option value="mecha">Mecha</option>
+                    </select>
+                </div>
+                
+                <div class="filters__group">
+                    <label class="filters__label" for="year">Año</label>
+                    <select id="year" class="filters__select">
+                        <option value="all">Todos los años</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="classic">Clásicos</option>
+                    </select>
+                </div>
+
+                <div class="filters__group">
+                    <label class="filters__label" for="status">Estado</label>
+                    <select id="status" class="filters__select">
+                        <option value="all">Todos</option>
+                        <option value="airing">En Emisión</option>
+                        <option value="finished">Finalizado</option>
+                    </select>
+                </div>
+
+                <button type="button" id="apply-filters" class="btn btn--primary filters__btn">Aplicar Filtros</button>
+            </form>
+        </aside>
+
+        <section class="directory-grid">
+            <div class="directory-grid__header">
+                <h1 class="directory-grid__title">Directorio de Anime</h1>
+                <p class="directory-grid__results"><span id="results-count">12</span> resultados encontrados</p>
+            </div>
+            
+            <div class="grid" id="anime-grid">
+                <!-- Tarjetas de Anime -->
+                <article class="card" data-genre="shonen" data-year="2023" data-status="finished">
+                    <figure class="card__poster">
+                        <img src="https://via.placeholder.com/225x318/151c27/e1e6f0?text=Hunter+x+Hunter" alt="Hunter x Hunter">
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__title">Hunter x Hunter</h3>
+                        <p class="card__meta">Finalizado</p>
+                    </div>
+                </article>
+
+                <article class="card" data-genre="shonen" data-year="2024" data-status="airing">
+                    <figure class="card__poster">
+                        <img src="https://via.placeholder.com/225x318/151c27/e1e6f0?text=One+Piece" alt="One Piece">
+                        <figcaption class="card__badge">Nuevo</figcaption>
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__title">One Piece</h3>
+                        <p class="card__meta">En Emisión</p>
+                    </div>
+                </article>
+
+                <article class="card" data-genre="shonen" data-year="classic" data-status="finished">
+                    <figure class="card__poster">
+                        <img src="https://via.placeholder.com/225x318/151c27/e1e6f0?text=Dragon+Ball" alt="Dragon Ball Super">
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__title">Dragon Ball Super</h3>
+                        <p class="card__meta">Finalizado</p>
+                    </div>
+                </article>
+                
+                <article class="card" data-genre="shonen" data-year="classic" data-status="finished">
+                    <figure class="card__poster">
+                        <img src="https://via.placeholder.com/225x318/151c27/e1e6f0?text=Black+Clover" alt="Black Clover">
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__title">Black Clover</h3>
+                        <p class="card__meta">Finalizado</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 AnimeStream. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

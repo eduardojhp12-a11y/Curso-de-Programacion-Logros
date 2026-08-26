@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de Búsqueda - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="search-header">
+      <div class="container">
+        <h2>Resultados para: <span class="search-query">"Mochilero"</span></h2>
+        <p>Se encontraron 2 artículos relacionados con tu búsqueda.</p>
+        
+        <form action="busqueda.html" class="search-form">
+          <input type="text" class="form-input" placeholder="Buscar nuevos artículos..." value="Mochilero">
+          <button class="btn btn--primary">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="grid-cards">
+          <!-- Tarjeta 1 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1504280741564-c6a6f11cb202?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Patagonia" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Argentina</span>
+              <h3 class="card__title"><a href="post.html">Guía de Trekking en El Chaltén para Mochileros</a></h3>
+              <p class="card__excerpt">Todo lo que necesitas saber para prepararte para los senderos más imponentes del fin del mundo con poco presupuesto.</p>
+              <div class="card__meta">
+                <span class="card__date">28 Jul, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="3">🔖</button>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Tarjeta 2 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tailandia" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Tailandia</span>
+              <h3 class="card__title"><a href="post.html">Ruta del Norte de Tailandia: El paraíso mochilero</a></h3>
+              <p class="card__excerpt">Cómo moverte, dónde dormir y qué comer en la zona más amigable para viajar de mochilero en el Sudeste Asiático.</p>
+              <div class="card__meta">
+                <span class="card__date">15 Jul, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="4">🔖</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">...</footer>
+<script src="main.js"></script>
+</body>
+</html>
+

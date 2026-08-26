@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Auténtico - Restaurante y Experiencia Gastronómica</title>
+    <meta name="description" content="Descubre los mejores sabores en Sabor Auténtico. Ingredientes frescos, recetas tradicionales y una experiencia culinaria inolvidable.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- CSS (for phase 2) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">Sabor Auténtico</h1>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menú</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- SECCIÓN 1: INICIO -->
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <h2 id="hero-title" class="hero__title">Donde la tradición se encuentra con la pasión</h2>
+                <p class="hero__subtitle">Experiencias culinarias memorables elaboradas con ingredientes locales de la más alta calidad.</p>
+                <a href="#menu" class="button button--primary hero__button">Explorar Nuestro Menú</a>
+            </div>
+        </section>
+
+        <section class="featured" aria-labelledby="featured-title">
+            <h2 id="featured-title" class="featured__title">Platos Destacados</h2>
+            <div class="featured__grid">
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <div class="card__image-placeholder" aria-label="Imagen de Lomo de res asado con hierbas" style="background-color: #ddd; height: 200px; width: 100%;"></div>
+                    <div class="card__content">
+                        <h3 class="card__title">Lomo Fino a las Finas Hierbas</h3>
+                        <p class="card__description">Tierno corte de res marinado en reducción de vino tinto y romero, acompañado de puré rústico.</p>
+                    </div>
+                </article>
+                <!-- Tarjeta 2 -->
+                <article class="card">
+                    <div class="card__image-placeholder" aria-label="Imagen de Risotto de champiñones" style="background-color: #ddd; height: 200px; width: 100%;"></div>
+                    <div class="card__content">
+                        <h3 class="card__title">Risotto del Bosque</h3>
+                        <p class="card__description">Arroz arborio cremoso con selección de setas silvestres, aceite de trufa y parmesano reggiano.</p>
+                    </div>
+                </article>
+                <!-- Tarjeta 3 -->
+                <article class="card">
+                    <div class="card__image-placeholder" aria-label="Imagen de Tarta de frutos rojos" style="background-color: #ddd; height: 200px; width: 100%;"></div>
+                    <div class="card__content">
+                        <h3 class="card__title">Delicia de Frutos Rojos</h3>
+                        <p class="card__description">Base de masa quebrada con crema pastelera a la vainilla y selección de frutos rojos frescos.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: MENÚ DIGITAL -->
+        <section id="menu" class="menu-section" aria-labelledby="menu-title">
+            <h2 id="menu-title" class="menu-section__title">Nuestro Menú</h2>
+            
+            <div class="menu-section__filters">
+                <button class="button button--filter button--active" data-filter="all">Todos</button>
+                <button class="button button--filter" data-filter="entradas">Entradas</button>
+                <button class="button button--filter" data-filter="fuertes">Platos Fuertes</button>
+                <button class="button button--filter" data-filter="postres">Postres</button>
+                <button class="button button--filter" data-filter="bebidas">Bebidas</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Ítem 1 (Entrada) -->
+                <article class="menu-item" data-category="entradas">
+                    <div class="menu-item__header">
+                        <h3 class="menu-item__name">Carpaccio de Salmón</h3>
+                        <span class="menu-item__price">$12.00</span>
+                    </div>
+                    <p class="menu-item__description">Finas láminas de salmón fresco curado, alcaparras, rúcula y emulsión de cítricos.</p>
+                    <div class="menu-item__tags">
+                        <span class="tag">Sin Gluten</span>
+                    </div>
+                </article>
+
+                <!-- Ítem 2 (Entrada) -->
+                <article class="menu-item" data-category="entradas">
+                    <div class="menu-item__header">
+                        <h3 class="menu-item__name">Provoleta al Orégano</h3>
+                        <span class="menu-item__price">$9.50</span>
+                    </div>
+                    <p class="menu-item__description">Queso provolone fundido al horno de leña, con tomates cherry confitados y pan de ajo artesanal.</p>
+                    <div class="menu-item__tags">
+                        <span class="tag">Vegetariano</span>
+                    </div>
+                </article>
+
+                <!-- Ítem 3 (Fuerte) -->
+                <article class="menu-item" data-category="fuertes">
+                    <div class="menu-item__header">
+                        <h3 class="menu-item__name">Pollo al Curry Rojo</h3>
+                        <span class="menu-item__price">$18.00</span>
+                    </div>
+                    <p class="menu-item__description">Pechuga de pollo cocinada a baja temperatura en salsa de curry rojo tailandés, leche de coco y verduras tiernas.</p>
+                    <div class="menu-item__tags">
+                        <span class="tag tag--spicy">Picante</span>
+                    </div>
+                </article>
+
+                <!-- Ítem 4 (Fuerte) -->
+                <article class="menu-item" data-category="fuertes">
+                    <div class="menu-item__header">
+                        <h3 class="menu-item__name">Raviolis de Calabaza</h3>
+                        <span class="menu-item__price">$16.50</span>
+                    </div>
+                    <p class="menu-item__description">Pasta artesanal rellena de calabaza asada, bañada en mantequilla de salvia y nueces tostadas.</p>
+                    <div class="menu-item__tags">
+                        <span class="tag">Vegetariano</span>
+                    </div>
+                </article>
+
+                <!-- Ítem 5 (Postre) -->
+                <article class="menu-item" data-category="postres">
+                    <div class="menu-item__header">
+                        <h3 class="menu-item__name">Volcán de Chocolate</h3>
+                        <span class="menu-item__price">$7.00</span>
+                    </div>
+                    <p class="menu-item__description">Bizcocho tibio de chocolate amargo con centro líquido, acompañado de helado de vainilla de Madagascar.</p>
+                </article>
+
+                <!-- Ítem 6 (Bebida) -->
+                <article class="menu-item" data-category="bebidas">
+                    <div class="menu-item__header">
+                        <h3 class="menu-item__name">Limonada de Coco y Menta</h3>
+                        <span class="menu-item__price">$4.50</span>
+                    </div>
+                    <p class="menu-item__description">Bebida refrescante a base de limón, crema de coco natural y hojas de menta maceradas.</p>
+                    <div class="menu-item__tags">
+                        <span class="tag">Vegano</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CONTACTO Y UBICACIÓN -->
+        <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+            <h2 id="contact-title" class="contact-section__title">Haz tu Reserva</h2>
+            
+            <div class="contact-section__container">
+                <form id="reservation-form" class="form" novalidate>
+                    <div class="form__group">
+                        <label for="name" class="form__label">Nombre completo</label>
+                        <input type="text" id="name" name="name" class="form__input" required aria-required="true" placeholder="Ej. Juan Pérez">
+                        <span class="form__error" id="name-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="date" class="form__label">Fecha de la reserva</label>
+                        <input type="date" id="date" name="date" class="form__input" required aria-required="true">
+                        <span class="form__error" id="date-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="time" class="form__label">Hora</label>
+                        <input type="time" id="time" name="time" class="form__input" required aria-required="true">
+                        <span class="form__error" id="time-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="guests" class="form__label">Número de personas</label>
+                        <input type="number" id="guests" name="guests" class="form__input" min="1" max="20" required aria-required="true" placeholder="Ej. 4">
+                        <span class="form__error" id="guests-error"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="message" class="form__label">Mensaje o solicitud especial (Opcional)</label>
+                        <textarea id="message" name="message" class="form__input form__input--textarea" rows="4" placeholder="Ej. Celebración de aniversario, alergias, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="button button--primary form__submit">Confirmar Reserva</button>
+                    <div class="form__success" id="form-success-msg" aria-live="polite"></div>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-info__block">
+                        <h3 class="contact-info__subtitle">Horarios de Atención</h3>
+                        <p class="contact-info__text">Lunes a Jueves: 12:00 PM - 10:00 PM</p>
+                        <p class="contact-info__text">Viernes a Sábado: 12:00 PM - 11:30 PM</p>
+                        <p class="contact-info__text">Domingos: 12:00 PM - 8:00 PM</p>
+                    </div>
+                    
+                    <div class="contact-info__block">
+                        <h3 class="contact-info__subtitle">Nuestra Ubicación</h3>
+                        <address class="contact-info__address">
+                            Av. Gastronomía 1234, Barrio Culinario.<br>
+                            Ciudad, País.<br>
+                            Teléfono: +123 456 7890
+                        </address>
+                        <!-- Mapa Simulado -->
+                        <div class="contact-info__map" aria-label="Mapa de ubicación">
+                            <p class="contact-info__map-text">Ubicación en el Mapa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2023 Sabor Auténtico. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script (for phase 3) -->
+    <script src="app.js"></script>
+</body>
+</html>

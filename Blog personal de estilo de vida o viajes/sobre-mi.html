@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mí - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="about section-padding">
+      <div class="container about__container">
+        <div class="about__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Retrato del Autor" class="about__image">
+        </div>
+        <div class="about__content">
+          <h1 class="about__title">Hola, soy Elena.</h1>
+          <p class="about__bio">Soy fotógrafa y escritora de viajes, y llevo más de cinco años recorriendo el mundo con una mochila y mi cámara. Creo en un estilo de vida consciente, donde cada viaje es una oportunidad para aprender, conectar con las culturas locales y crecer interiormente.</p>
+          
+          <h2 class="about__subtitle">Mi Filosofía de Viaje</h2>
+          <p class="about__text">Viajar no se trata de coleccionar sellos en el pasaporte, sino de coleccionar momentos. Prefiero el "slow travel", quedarme más tiempo en los lugares para realmente entender su ritmo y su gente. En este blog, comparto mis guías, reflexiones y los rincones más hermosos que he tenido la suerte de pisar.</p>
+
+          <div class="contact-card">
+            <h3 class="contact-card__title">¿Hablamos?</h3>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" id="name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" id="email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" rows="4" class="form-input" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3 class="footer__title">Tierra y Viento</h3>
+          <p class="footer__description">Explorando el mundo a través de historias, fotografías y guías prácticas para nómadas y amantes del estilo de vida consciente.</p>
+        </div>
+        
+        <div class="footer__links">
+          <h4 class="footer__links-title">Enlaces Legales</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__newsletter">
+          <h4 class="footer__links-title">Únete a la Aventura</h4>
+          <p class="footer__description">Recibe nuestras mejores historias y guías directamente en tu correo.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter__button">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Tierra y Viento. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+

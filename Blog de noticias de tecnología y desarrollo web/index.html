@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech & Web Dev News</title>
+    <meta name="description" content="El mejor blog de noticias sobre tecnología, desarrollo web, inteligencia artificial y ciberseguridad.">
+    <!-- Open Graph Básico -->
+    <meta property="og:title" content="Tech & Web Dev News">
+    <meta property="og:description" content="Mantente actualizado con las últimas noticias del mundo del desarrollo de software y tecnología.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar nav">
+            <div class="nav__brand">
+                <a href="#" class="nav__logo" id="logo-link">TechDevNews</a>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#" class="nav__link" data-view="home">Inicio</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" data-view="categories">Categorías</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" data-view="favorites">Favoritos</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="btn btn--icon" id="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+                    🌙
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content" id="app-root">
+        <!-- Las vistas serán inyectadas dinámicamente aquí por JavaScript -->
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 Tech & Web Dev News. Todos los derechos reservados.</p>
+            <ul class="footer__links">
+                <li><a href="#" class="footer__link">Acerca de</a></li>
+                <li><a href="#" class="footer__link">Contacto</a></li>
+                <li><a href="#" class="footer__link">Términos de Privacidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

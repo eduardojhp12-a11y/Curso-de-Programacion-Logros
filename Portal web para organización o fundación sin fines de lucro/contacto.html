@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ponte en contacto con Fundación Esperanza. Encuentra nuestra ubicación, teléfono y formulario de contacto.">
+    <title>Contacto | Fundación Esperanza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav__logo" aria-label="Inicio">Fundación Esperanza</a>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li><a href="voluntariado.html" class="nav__link">Voluntariado</a></li>
+                    <li><a href="transparencia.html" class="nav__link">Transparencia</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="aliados.html" class="nav__link">Aliados</a></li>
+                    <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                    <li><a href="contacto.html" class="nav__link" aria-current="page">Contacto</a></li>
+                    <li><a href="donar.html" class="btn btn--secondary" aria-label="Donar ahora">Donar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1 class="page-hero__title">Contáctanos</h1>
+                <p class="page-hero__subtitle">Estamos aquí para escucharte. Ya sea para donar, ser voluntario o si tienes dudas, escríbenos.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Información y Mapa -->
+                    <div class="contact-info">
+                        <h2 class="section__title">Nuestras Oficinas</h2>
+                        <div class="info-block">
+                            <p><strong>Dirección:</strong> Av. de la Solidaridad 123, Edificio Esperanza, Piso 4, Ciudad Principal, CP 10000.</p>
+                            <p><strong>Horario:</strong> Lunes a Viernes de 9:00 AM a 5:00 PM.</p>
+                            <p><strong>Teléfono:</strong> +1 234 567 8900</p>
+                            <p><strong>Email:</strong> hola@fundacionesperanza.org</p>
+                        </div>
+                        
+                        <div class="social-links mt-lg">
+                            <h3 class="form-subtitle">Síguenos</h3>
+                            <div style="display: flex; gap: 15px;">
+                                <a href="#" class="btn btn--primary" style="padding: 8px 16px;">Facebook</a>
+                                <a href="#" class="btn btn--primary" style="padding: 8px 16px;">Instagram</a>
+                                <a href="#" class="btn btn--primary" style="padding: 8px 16px;">LinkedIn</a>
+                            </div>
+                        </div>
+
+                        <!-- Mockup Visual del Mapa -->
+                        <div class="map-mockup mt-lg">
+                            <span>🗺️ Ubicación del Mapa Interactivo (Google Maps)</span>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-container bg-light">
+                        <h2 class="form-subtitle">Envíanos un mensaje</h2>
+                        <form class="general-form" onsubmit="event.preventDefault(); alert('¡Gracias por contactarnos! Responderemos a tu mensaje a la brevedad.'); this.reset();">
+                            <div class="form-group">
+                                <label class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Correo Electrónico *</label>
+                                <input type="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Asunto *</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Mensaje *</label>
+                                <textarea class="form-input" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--secondary btn--full mt-lg">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__heading">Fundación Esperanza</h3>
+                    <p class="footer__text">Impulsando el cambio social y brindando oportunidades a quienes más lo necesitan. Tu apoyo hace la diferencia.</p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Enlaces Rápidos</h3>
+                    <ul aria-label="Enlaces del pie de página">
+                        <li><a href="nosotros.html" class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="proyectos.html" class="footer__link">Nuestros Proyectos</a></li>
+                        <li><a href="transparencia.html" class="footer__link">Informes Financieros</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <p class="footer__text">
+                        📍 Av. de la Solidaridad 123, Ciudad<br>
+                        📞 +1 234 567 8900<br>
+                        ✉️ hola@fundacionesperanza.org
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Fundación Esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

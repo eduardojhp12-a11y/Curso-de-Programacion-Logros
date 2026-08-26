@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Noticias y Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="index.html">AnimeStream</a>
+            </div>
+            <ul class="header__menu">
+                <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+                <li class="header__item"><a href="directorio.html" class="header__link">Directorio</a></li>
+                <li class="header__item"><a href="calendario.html" class="header__link">Calendario</a></li>
+                <li class="header__item"><a href="noticias.html" class="header__link header__link--active">Noticias</a></li>
+            </ul>
+            <div class="header__actions">
+                <a href="admin.html" class="header__icon" style="color:var(--text-secondary); margin-right: 10px;">Panel Admin</a>
+                <a href="watchlist.html" class="header__icon">Mi Lista</a>
+                <a href="login.html" class="header__btn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main news-container">
+        <h1 class="page-title">Últimas Noticias del Mundo del Anime</h1>
+        
+        <section class="news-hero">
+            <article class="news-hero__article" style="background-image: linear-gradient(to top, rgba(10,15,22,1) 0%, rgba(10,15,22,0) 100%), url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                <div class="news-hero__content">
+                    <span class="badge badge--news">Exclusiva</span>
+                    <h2 class="news-hero__title">Togashi anuncia el regreso del manga de Hunter x Hunter con nuevos capítulos</h2>
+                    <p class="news-hero__excerpt">Después de una larga pausa, el legendario autor confirma que tiene listos 10 nuevos capítulos que continuarán el arco del Continente Oscuro.</p>
+                    <div class="news-hero__meta">
+                        <span>Por: Staff AnimeStream</span>
+                        <span>•</span>
+                        <span>Hace 2 horas</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="news-grid">
+            <article class="news-card">
+                <figure class="news-card__image">
+                    <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="One Piece">
+                </figure>
+                <div class="news-card__content">
+                    <span class="news-card__tag">Actualización</span>
+                    <h3 class="news-card__title">One Piece rompe récords de audiencia con su último episodio</h3>
+                    <p class="news-card__excerpt">El esperado climax de la batalla en Wano ha saturado los servidores globales en su estreno.</p>
+                    <span class="news-card__date">Hace 5 horas</span>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <figure class="news-card__image">
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jujutsu Kaisen">
+                </figure>
+                <div class="news-card__content">
+                    <span class="news-card__tag">Industria</span>
+                    <h3 class="news-card__title">MAPPA revela un adelanto de la nueva temporada de Jujutsu Kaisen</h3>
+                    <p class="news-card__excerpt">El estudio de animación mostró los primeros diseños de personajes para el próximo arco argumental.</p>
+                    <span class="news-card__date">Ayer</span>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <figure class="news-card__image">
+                    <img src="https://images.unsplash.com/photo-1580477659154-1811a2f96eec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Análisis">
+                </figure>
+                <div class="news-card__content">
+                    <span class="news-card__tag">Análisis</span>
+                    <h3 class="news-card__title">La evolución del héroe Shonen: De Goku a los protagonistas modernos</h3>
+                    <p class="news-card__excerpt">Un profundo análisis narrativo sobre cómo han cambiado las motivaciones de nuestros héroes favoritos en las últimas décadas.</p>
+                    <span class="news-card__date">Hace 2 días</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 AnimeStream. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

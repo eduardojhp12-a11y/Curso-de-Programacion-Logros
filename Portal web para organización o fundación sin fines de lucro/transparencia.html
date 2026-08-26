@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transparencia financiera de Fundación Esperanza. Conoce el destino de los fondos y descarga nuestros informes anuales.">
+    <title>Transparencia | Fundación Esperanza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav__logo" aria-label="Inicio">Fundación Esperanza</a>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li><a href="voluntariado.html" class="nav__link">Voluntariado</a></li>
+                    <li><a href="transparencia.html" class="nav__link" aria-current="page">Transparencia</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="aliados.html" class="nav__link">Aliados</a></li>
+                    <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                    <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    <li><a href="donar.html" class="btn btn--secondary" aria-label="Donar ahora">Donar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1 class="page-hero__title">Transparencia Total</h1>
+                <p class="page-hero__subtitle">Tu confianza es nuestro mayor activo. Descubre exactamente cómo invertimos cada donación para maximizar el impacto.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                
+                <!-- Gráfico de distribución -->
+                <h2 class="section__title text-center">Destino de los Fondos (2025)</h2>
+                <div class="chart-container">
+                    <div class="css-pie-chart"></div>
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="legend-color" style="background: var(--color-primary);"></span> 70% Programas y Proyectos</div>
+                        <div class="legend-item"><span class="legend-color" style="background: var(--color-secondary);"></span> 20% Logística y Operaciones</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #feca57;"></span> 10% Administración y Recaudación</div>
+                    </div>
+                </div>
+
+                <!-- Tabla Financiera -->
+                <h2 class="section__title text-center" style="margin-top: var(--spacing-xl);">Resumen Financiero</h2>
+                <div class="table-responsive">
+                    <table class="financial-table">
+                        <thead>
+                            <tr>
+                                <th>Concepto</th>
+                                <th>Ingresos</th>
+                                <th>Egresos</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Programa Educación</td>
+                                <td>$450,000</td>
+                                <td>$420,000</td>
+                                <td class="positive">+$30,000</td>
+                            </tr>
+                            <tr>
+                                <td>Programa Salud</td>
+                                <td>$320,000</td>
+                                <td>$315,000</td>
+                                <td class="positive">+$5,000</td>
+                            </tr>
+                            <tr>
+                                <td>Comedores Comunitarios</td>
+                                <td>$200,000</td>
+                                <td>$205,000</td>
+                                <td class="negative">-$5,000</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Total (USD)</strong></td>
+                                <td><strong>$970,000</strong></td>
+                                <td><strong>$940,000</strong></td>
+                                <td class="positive"><strong>+$30,000</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Descarga de Informes -->
+                <div class="reports-section bg-light" style="margin-top: var(--spacing-xl); padding: var(--spacing-lg); border-radius: var(--border-radius); text-align: center;">
+                    <h2 class="section__title">Informes Anuales</h2>
+                    <p>Descarga nuestros reportes auditados de años anteriores.</p>
+                    <div class="reports-grid" style="display: flex; gap: var(--spacing-md); justify-content: center; margin-top: var(--spacing-md); flex-wrap: wrap;">
+                        <a href="#" class="btn btn--primary">Descargar Informe 2025 (PDF)</a>
+                        <a href="#" class="btn btn--primary">Descargar Informe 2024 (PDF)</a>
+                        <a href="#" class="btn btn--primary">Descargar Informe 2023 (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__heading">Fundación Esperanza</h3>
+                    <p class="footer__text">Impulsando el cambio social y brindando oportunidades a quienes más lo necesitan. Tu apoyo hace la diferencia.</p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Enlaces Rápidos</h3>
+                    <ul aria-label="Enlaces del pie de página">
+                        <li><a href="nosotros.html" class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="proyectos.html" class="footer__link">Nuestros Proyectos</a></li>
+                        <li><a href="transparencia.html" class="footer__link">Informes Financieros</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <p class="footer__text">
+                        📍 Av. de la Solidaridad 123, Ciudad<br>
+                        📞 +1 234 567 8900<br>
+                        ✉️ hola@fundacionesperanza.org
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Fundación Esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

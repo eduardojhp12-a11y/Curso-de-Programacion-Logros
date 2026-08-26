@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domina el Desarrollo Web Frontend | Masterclass Gratuita</title>
+    <meta name="description" content="Aprende a crear aplicaciones web modernas, rápidas y accesibles. Inscríbete a nuestra Masterclass gratuita y transforma tu carrera tecnológica hoy mismo.">
+    
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    
+    <!-- Header Sticky -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <span class="header__logo-text">FrontEnd<span class="header__logo-highlight">Mastery</span></span>
+            </div>
+            <nav class="header__nav">
+                <a href="#registro" class="btn btn--secondary header__cta">Inscríbete Ahora</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <span class="hero__badge">Webinar 100% Gratuito y En Vivo</span>
+                    <h1 class="hero__title">Transforma tu Carrera: Conviértete en un Arquitecto Front-End de Alto Valor</h1>
+                    <p class="hero__subtitle">Descubre los secretos para construir aplicaciones web escalables, dominar los frameworks modernos y triplicar tus oportunidades laborales en menos de 90 días.</p>
+                    
+                    <div class="countdown hero__countdown" id="countdown">
+                        <div class="countdown__item">
+                            <span class="countdown__value" id="days">00</span>
+                            <span class="countdown__label">Días</span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__value" id="hours">00</span>
+                            <span class="countdown__label">Horas</span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__value" id="minutes">00</span>
+                            <span class="countdown__label">Minutos</span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__value" id="seconds">00</span>
+                            <span class="countdown__label">Segundos</span>
+                        </div>
+                    </div>
+
+                    <a href="#registro" class="btn btn--primary hero__cta">Asegurar Mi Lugar Ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Temario/Beneficios -->
+        <section class="benefits" id="beneficios">
+            <div class="benefits__container">
+                <h2 class="benefits__title">Lo que descubrirás en esta sesión exclusiva</h2>
+                
+                <div class="benefits__grid">
+                    <article class="card benefits__card">
+                        <div class="card__icon-wrapper">
+                            <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20V10"></path>
+                                <path d="M18 20V4"></path>
+                                <path d="M6 20v-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Arquitectura Escalable</h3>
+                        <p class="card__description">Aprende a estructurar proyectos complejos desde cero, asegurando rendimiento, mantenibilidad y código limpio para aplicaciones de nivel empresarial.</p>
+                    </article>
+
+                    <article class="card benefits__card">
+                        <div class="card__icon-wrapper">
+                            <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Optimización de Conversiones (CRO)</h3>
+                        <p class="card__description">Técnicas avanzadas de desarrollo visual que no solo se ven increíbles, sino que están diseñadas para maximizar la retención de usuarios y ventas.</p>
+                    </article>
+
+                    <article class="card benefits__card">
+                        <div class="card__icon-wrapper">
+                            <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Accesibilidad y SEO Técnico</h3>
+                        <p class="card__description">Domina las directrices WCAG y HTML semántico para crear aplicaciones inclusivas y posicionarlas en los primeros resultados de búsqueda orgánicamente.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Instructor -->
+        <section class="instructor">
+            <div class="instructor__container">
+                <div class="instructor__content-wrapper">
+                    <div class="instructor__image-container">
+                        <!-- Placeholder circular -->
+                        <div class="instructor__avatar"></div>
+                    </div>
+                    <div class="instructor__info">
+                        <span class="instructor__tag">Tu Instructor</span>
+                        <h2 class="instructor__name">Carlos Mendoza</h2>
+                        <p class="instructor__credentials">Senior Front-End Architect & Lead UX Developer</p>
+                        <p class="instructor__bio">Con más de 10 años de experiencia liderando equipos técnicos en Silicon Valley, Carlos ha ayudado a escalar productos utilizados por millones de usuarios. Su metodología de enseñanza se basa en proyectos reales, eliminando la teoría innecesaria para enfocarse en resultados tangibles que el mercado actual demanda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Captura (Lead Magnet) -->
+        <section class="capture" id="registro">
+            <div class="capture__container">
+                <div class="capture__box">
+                    <h2 class="capture__title">Da el primer paso hacia tu nueva carrera</h2>
+                    <p class="capture__subtitle">Los cupos son limitados para garantizar la calidad de la sesión. Reserva tu entrada gratuita hoy.</p>
+                    
+                    <form class="form capture__form" id="registrationForm" novalidate>
+                        <div class="form__group">
+                            <label for="fullName" class="form__label">Nombre Completo</label>
+                            <input type="text" id="fullName" name="fullName" class="form__input" placeholder="Ej. Ana García" required aria-required="true">
+                            <span class="form__error" id="nameError">Por favor ingresa tu nombre completo.</span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="form__input" placeholder="tu@correo.com" required aria-required="true">
+                            <span class="form__error" id="emailError">Por favor ingresa un correo electrónico válido.</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary form__submit">Completar Mi Registro</button>
+                        <p class="form__privacy-note">Prometemos no enviar spam. Tus datos están 100% seguros con nosotros.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="#" class="footer__link">Políticas de Privacidad</a>
+                <a href="#" class="footer__link">Términos de Servicio</a>
+            </div>
+            <p class="footer__copyright">&copy; 2026 FrontEnd Mastery. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Éxito -->
+    <div class="modal" id="successModal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <div class="modal__content">
+                    <div class="modal__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="modal__title" id="modal-title">¡Registro Completado con Éxito!</h2>
+                    <p class="modal__description">Tu lugar ha sido reservado. Te hemos enviado un correo electrónico con todos los detalles de acceso a la masterclass.</p>
+                    <button class="btn btn--primary modal__close" id="closeModal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

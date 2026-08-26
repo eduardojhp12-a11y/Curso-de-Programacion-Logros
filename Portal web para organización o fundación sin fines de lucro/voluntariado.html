@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Únete como voluntario en Fundación Esperanza y sé parte del cambio. Descubre los beneficios y llena el formulario de inscripción.">
+    <title>Voluntariado | Fundación Esperanza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav__logo" aria-label="Inicio">Fundación Esperanza</a>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li><a href="voluntariado.html" class="nav__link" aria-current="page">Voluntariado</a></li>
+                    <li><a href="transparencia.html" class="nav__link">Transparencia</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="aliados.html" class="nav__link">Aliados</a></li>
+                    <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                    <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    <li><a href="donar.html" class="btn btn--secondary" aria-label="Donar ahora">Donar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1 class="page-hero__title">Sé el Cambio que el Mundo Necesita</h1>
+                <p class="page-hero__subtitle">Tu tiempo y habilidades pueden transformar vidas. Únete a nuestra red de voluntarios.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="volunteer-layout">
+                    <!-- Beneficios -->
+                    <div class="volunteer-benefits">
+                        <h2 class="section__title">¿Por qué ser voluntario?</h2>
+                        <ul class="benefits-list">
+                            <li>
+                                <strong>Impacto Directo:</strong> Verás cómo tu esfuerzo mejora directamente la calidad de vida de niños y familias.
+                            </li>
+                            <li>
+                                <strong>Crecimiento Personal:</strong> Desarrollarás nuevas habilidades, empatía y liderazgo en un entorno dinámico.
+                            </li>
+                            <li>
+                                <strong>Comunidad:</strong> Conocerás a personas increíbles que comparten tus mismos valores y visión de un mundo mejor.
+                            </li>
+                            <li>
+                                <strong>Certificación:</strong> Al finalizar tu programa, recibirás un certificado con valor curricular por tus horas de servicio.
+                            </li>
+                        </ul>
+                        
+                        <div class="volunteer-image"></div>
+                    </div>
+
+                    <!-- Formulario -->
+                    <div class="volunteer-form-container bg-light">
+                        <h2 class="form-subtitle">Formulario de Inscripción</h2>
+                        <form id="volunteerForm" class="volunteer-form">
+                            <div class="form-group">
+                                <label for="volNombre" class="form-label">Nombre Completo *</label>
+                                <input type="text" id="volNombre" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volEmail" class="form-label">Correo Electrónico *</label>
+                                <input type="email" id="volEmail" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volPhone" class="form-label">Teléfono *</label>
+                                <input type="tel" id="volPhone" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volArea" class="form-label">Área de Interés *</label>
+                                <select id="volArea" class="form-input" required>
+                                    <option value="">Selecciona un área</option>
+                                    <option value="educacion">Apoyo Educativo</option>
+                                    <option value="salud">Jornadas de Salud</option>
+                                    <option value="nutricion">Comedores Comunitarios</option>
+                                    <option value="logistica">Logística y Eventos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="volDisponibilidad" class="form-label">Disponibilidad</label>
+                                <input type="text" id="volDisponibilidad" class="form-input" placeholder="Ej. Fines de semana, 4 horas">
+                            </div>
+                            <div class="form-group">
+                                <label for="volMensaje" class="form-label">¿Por qué te gustaría unirte? (Opcional)</label>
+                                <textarea id="volMensaje" class="form-input" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full btn--submit">Enviar Solicitud</button>
+                            
+                            <div id="volMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__heading">Fundación Esperanza</h3>
+                    <p class="footer__text">Impulsando el cambio social y brindando oportunidades a quienes más lo necesitan. Tu apoyo hace la diferencia.</p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Enlaces Rápidos</h3>
+                    <ul aria-label="Enlaces del pie de página">
+                        <li><a href="nosotros.html" class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="proyectos.html" class="footer__link">Nuestros Proyectos</a></li>
+                        <li><a href="transparencia.html" class="footer__link">Informes Financieros</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <p class="footer__text">
+                        📍 Av. de la Solidaridad 123, Ciudad<br>
+                        📞 +1 234 567 8900<br>
+                        ✉️ hola@fundacionesperanza.org
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Fundación Esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

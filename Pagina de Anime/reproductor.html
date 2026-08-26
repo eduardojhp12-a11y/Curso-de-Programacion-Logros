@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Reproductor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="index.html">AnimeStream</a>
+            </div>
+            <ul class="header__menu">
+                <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+                <li class="header__item"><a href="directorio.html" class="header__link">Directorio</a></li>
+                <li class="header__item"><a href="calendario.html" class="header__link">Calendario</a></li>
+                <li class="header__item"><a href="noticias.html" class="header__link">Noticias</a></li>
+            </ul>
+            <div class="header__actions">
+                <a href="watchlist.html" class="header__icon">Mi Lista</a>
+                <a href="login.html" class="header__btn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main player-container">
+        <section class="video-section">
+            <h1 class="video-section__title">Hunter x Hunter - Episodio 116: Venganza y Recuperación</h1>
+            
+            <div class="video-player" id="video-player-ui">
+                <div class="video-player__screen">
+                    <!-- Simulación de área de video -->
+                    <div class="video-player__overlay" id="play-overlay">
+                        <button class="video-player__big-play">▶</button>
+                    </div>
+                </div>
+                
+                <div class="video-player__controls">
+                    <button class="control-btn" id="play-pause-btn">▶</button>
+                    
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress-bar__fill" id="progress-fill"></div>
+                    </div>
+                    
+                    <span class="time-display">00:00 / 24:00</span>
+                    
+                    <select class="resolution-select">
+                        <option value="1080p">1080p</option>
+                        <option value="720p">720p</option>
+                        <option value="4k">4K</option>
+                    </select>
+                    
+                    <button class="control-btn">⛶</button>
+                </div>
+            </div>
+            
+            <div class="video-actions">
+                <a href="#" class="btn btn--secondary">Episodio Anterior</a>
+                <a href="#" class="btn btn--secondary">Siguiente Episodio</a>
+            </div>
+        </section>
+
+        <section class="comments-section">
+            <h2 class="comments-section__title">Comentarios (124)</h2>
+            
+            <div class="comment-form">
+                <textarea class="comment-form__input" placeholder="Deja tu comentario sobre este episodio..." rows="3"></textarea>
+                <button class="btn btn--primary">Publicar Comentario</button>
+            </div>
+            
+            <div class="comment-list">
+                <div class="comment">
+                    <div class="comment__avatar">N</div>
+                    <div class="comment__body">
+                        <div class="comment__header">
+                            <strong class="comment__author">NenMaster99</strong>
+                            <span class="comment__date">Hace 2 horas</span>
+                        </div>
+                        <p class="comment__text">¡Este episodio es increíble! La animación de Madhouse en este arco no decepciona, la tensión se puede cortar con un cuchillo.</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment__avatar">K</div>
+                    <div class="comment__body">
+                        <div class="comment__header">
+                            <strong class="comment__author">KurapikaFan</strong>
+                            <span class="comment__date">Hace 5 horas</span>
+                        </div>
+                        <p class="comment__text">Increíble desarrollo de personaje. Gon realmente está perdiendo el control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 AnimeStream. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

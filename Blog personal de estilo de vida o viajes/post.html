@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perdiéndose en la Medina - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <article>
+      <header class="post-header">
+        <div class="post-header__bg" style="background-image: url('https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="container post-header__content">
+          <span class="post-tag">Marruecos</span>
+          <h1 class="post-title">Perdiéndose en los colores de la Medina de Marrakech</h1>
+          <div class="post-meta">
+            <span>Por Elena</span>
+            <span>&bull;</span>
+            <span>12 Ago, 2026</span>
+            <span>&bull;</span>
+            <span>6 min de lectura</span>
+            <button class="btn-bookmark post-bookmark" aria-label="Guardar en favoritos" data-id="1">🔖 Guardar</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>Marrakech es una ciudad que asalta tus sentidos desde el primer momento en que pisas sus calles polvorientas. Es un laberinto de colores terracota, sonidos de vendedores regateando y el aroma inconfundible de especias frescas que flota en el aire.</p>
+        
+        <h2>El Corazón del Zoco</h2>
+        <p>Caminar por el zoco no es solo una actividad turística; es un rito de iniciación. No hay un mapa que te pueda salvar de perderte, y de hecho, esa es exactamente la idea. Es en esos callejones sin salida donde encuentras a los artesanos trabajando el cuero, la plata y la cerámica con técnicas que han pasado de generación en generación.</p>
+
+        <figure>
+          <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Especias en Marrakech">
+          <figcaption>Torres de especias coloridas en los mercados de Marrakech.</figcaption>
+        </figure>
+
+        <blockquote>
+          "El verdadero viaje de descubrimiento no consiste en buscar nuevos paisajes, sino en mirar con nuevos ojos." – Marcel Proust
+        </blockquote>
+
+        <h2>La Magia del Atardecer</h2>
+        <p>Cuando el sol comienza a ponerse, la Plaza Jemaa el-Fnaa se transforma. Los encantadores de serpientes y cuentacuentos dan paso a los puestos de comida humeantes. La luz dorada baña los minaretes y de repente, la ciudad parece estar suspendida en el tiempo.</p>
+
+        <h3>Consejos Prácticos</h3>
+        <ul>
+          <li><strong>Regateo:</strong> Es parte de la cultura. Empieza ofreciendo un tercio del precio inicial.</li>
+          <li><strong>Vestimenta:</strong> Lleva ropa cómoda y modesta que cubra hombros y rodillas.</li>
+          <li><strong>Fotografía:</strong> Pide siempre permiso antes de fotografiar a los locales, especialmente a los artesanos.</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3 class="footer__title">Tierra y Viento</h3>
+          <p class="footer__description">Explorando el mundo a través de historias, fotografías y guías prácticas para nómadas y amantes del estilo de vida consciente.</p>
+        </div>
+        
+        <div class="footer__links">
+          <h4 class="footer__links-title">Enlaces Legales</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__newsletter">
+          <h4 class="footer__links-title">Únete a la Aventura</h4>
+          <p class="footer__description">Recibe nuestras mejores historias y guías directamente en tu correo.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter__button">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Tierra y Viento. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+

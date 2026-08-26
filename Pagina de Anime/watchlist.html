@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Mi Lista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="index.html">AnimeStream</a>
+            </div>
+            <ul class="header__menu">
+                <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+                <li class="header__item"><a href="directorio.html" class="header__link">Directorio</a></li>
+                <li class="header__item"><a href="calendario.html" class="header__link">Calendario</a></li>
+                <li class="header__item"><a href="noticias.html" class="header__link">Noticias</a></li>
+            </ul>
+            <div class="header__actions">
+                <a href="watchlist.html" class="header__icon header__link--active">Mi Lista</a>
+                <a href="login.html" class="header__btn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main watchlist-container">
+        <h1 class="page-title">Mi Lista</h1>
+        
+        <div class="tabs">
+            <button class="tab-btn tab-btn--active" data-tab="viendo">Viendo (<span id="count-viendo">0</span>)</button>
+            <button class="tab-btn" data-tab="completado">Completado (<span id="count-completado">0</span>)</button>
+            <button class="tab-btn" data-tab="plan">Plan para ver (<span id="count-plan">0</span>)</button>
+        </div>
+
+        <div class="tab-content tab-content--active" id="tab-viendo">
+            <div class="grid" id="grid-viendo">
+                <!-- Se llenará con JS -->
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab-completado">
+            <div class="grid" id="grid-completado">
+                <!-- Se llenará con JS -->
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab-plan">
+            <div class="grid" id="grid-plan">
+                <!-- Se llenará con JS -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 AnimeStream. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

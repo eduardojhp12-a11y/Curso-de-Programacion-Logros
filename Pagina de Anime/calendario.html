@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Calendario de Emisión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="index.html">AnimeStream</a>
+            </div>
+            <ul class="header__menu">
+                <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+                <li class="header__item"><a href="directorio.html" class="header__link">Directorio</a></li>
+                <li class="header__item"><a href="calendario.html" class="header__link header__link--active">Calendario</a></li>
+                <li class="header__item"><a href="noticias.html" class="header__link">Noticias</a></li>
+            </ul>
+            <div class="header__actions">
+                <a href="watchlist.html" class="header__icon">Mi Lista</a>
+                <a href="login.html" class="header__btn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main calendar-container">
+        <h1 class="page-title">Calendario Semanal de Emisión</h1>
+        <p class="calendar-subtitle">Descubre qué días se estrenan los nuevos episodios de tus animes favoritos (Temporada Actual).</p>
+
+        <div class="calendar-grid">
+            <!-- Lunes -->
+            <div class="calendar-day">
+                <div class="calendar-day__header">
+                    <h3>Lunes</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <!-- Anime 1 -->
+                    <div class="calendar-item">
+                        <img src="https://via.placeholder.com/60x85/151c27/e1e6f0?text=SPXF" alt="Spy x Family" class="calendar-item__img">
+                        <div class="calendar-item__info">
+                            <span class="calendar-item__time">10:30 AM</span>
+                            <h4 class="calendar-item__title">Spy x Family</h4>
+                            <span class="calendar-item__ep">Episodio 24</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Martes -->
+            <div class="calendar-day">
+                <div class="calendar-day__header">
+                    <h3>Martes</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <p class="calendar-empty">No hay estrenos programados.</p>
+                </div>
+            </div>
+
+            <!-- Miércoles -->
+            <div class="calendar-day">
+                <div class="calendar-day__header">
+                    <h3>Miércoles</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <div class="calendar-item">
+                        <img src="https://via.placeholder.com/60x85/151c27/e1e6f0?text=JJK" alt="Jujutsu Kaisen" class="calendar-item__img">
+                        <div class="calendar-item__info">
+                            <span class="calendar-item__time">13:00 PM</span>
+                            <h4 class="calendar-item__title">Jujutsu Kaisen</h4>
+                            <span class="calendar-item__ep">Episodio 45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jueves -->
+            <div class="calendar-day">
+                <div class="calendar-day__header">
+                    <h3>Jueves</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <div class="calendar-item">
+                        <img src="https://via.placeholder.com/60x85/151c27/e1e6f0?text=Dr+Stone" alt="Dr. Stone" class="calendar-item__img">
+                        <div class="calendar-item__info">
+                            <span class="calendar-item__time">09:30 AM</span>
+                            <h4 class="calendar-item__title">Dr. Stone</h4>
+                            <span class="calendar-item__ep">Episodio 32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viernes -->
+            <div class="calendar-day calendar-day--today">
+                <div class="calendar-day__header">
+                    <h3>Viernes (Hoy)</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <div class="calendar-item">
+                        <img src="https://via.placeholder.com/60x85/151c27/e1e6f0?text=Frieren" alt="Frieren" class="calendar-item__img">
+                        <div class="calendar-item__info">
+                            <span class="calendar-item__time">11:00 AM</span>
+                            <h4 class="calendar-item__title">Frieren</h4>
+                            <span class="calendar-item__ep">Episodio 16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sábado -->
+            <div class="calendar-day">
+                <div class="calendar-day__header">
+                    <h3>Sábado</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <div class="calendar-item">
+                        <img src="https://via.placeholder.com/60x85/151c27/e1e6f0?text=OP" alt="One Piece" class="calendar-item__img">
+                        <div class="calendar-item__info">
+                            <span class="calendar-item__time">21:00 PM</span>
+                            <h4 class="calendar-item__title">One Piece</h4>
+                            <span class="calendar-item__ep">Episodio 1085</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Domingo -->
+            <div class="calendar-day">
+                <div class="calendar-day__header">
+                    <h3>Domingo</h3>
+                </div>
+                <div class="calendar-day__content">
+                    <div class="calendar-item">
+                        <img src="https://via.placeholder.com/60x85/151c27/e1e6f0?text=Solo+Lev." alt="Solo Leveling" class="calendar-item__img">
+                        <div class="calendar-item__info">
+                            <span class="calendar-item__time">12:30 PM</span>
+                            <h4 class="calendar-item__title">Solo Leveling</h4>
+                            <span class="calendar-item__ep">Episodio 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 AnimeStream. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

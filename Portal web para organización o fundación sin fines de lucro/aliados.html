@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce a los aliados corporativos y ONGs que hacen posible nuestra labor. Únete como empresa colaboradora de Fundación Esperanza.">
+    <title>Aliados Corporativos | Fundación Esperanza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav__logo" aria-label="Inicio">Fundación Esperanza</a>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="proyectos.html" class="nav__link">Proyectos</a></li>
+                    <li><a href="voluntariado.html" class="nav__link">Voluntariado</a></li>
+                    <li><a href="transparencia.html" class="nav__link">Transparencia</a></li>
+                    <li><a href="blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="aliados.html" class="nav__link" aria-current="page">Aliados</a></li>
+                    <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                    <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    <li><a href="donar.html" class="btn btn--secondary" aria-label="Donar ahora">Donar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container text-center">
+                <h1 class="page-hero__title">Nuestros Aliados</h1>
+                <p class="page-hero__subtitle">El cambio a gran escala requiere grandes alianzas. Agradecemos a quienes suman esfuerzos con nosotros.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title text-center">Empresas e Instituciones Patrocinadoras</h2>
+                <div class="partners-grid">
+                    <div class="partner-logo">EcoCorp</div>
+                    <div class="partner-logo">Tech for Good</div>
+                    <div class="partner-logo">Banco Solidario</div>
+                    <div class="partner-logo">AgroAlimentos</div>
+                    <div class="partner-logo">Fundación Global</div>
+                    <div class="partner-logo">Salud Plus</div>
+                </div>
+
+                <div class="partner-cta bg-light" style="margin-top: var(--spacing-xl); padding: var(--spacing-xl); border-radius: var(--border-radius);">
+                    <div class="partner-layout">
+                        <div class="partner-info">
+                            <h2 class="section__title">Únete como Aliado</h2>
+                            <p>Tu empresa puede marcar la diferencia. Ofrecemos programas de voluntariado corporativo, patrocinios de proyectos específicos y donaciones en especie.</p>
+                            <p style="margin-top: 1rem;"><strong>Beneficios:</strong> Deducción de impuestos, reporte de impacto personalizado y visibilidad de Responsabilidad Social Empresarial (RSE).</p>
+                        </div>
+                        <div class="partner-form">
+                            <form class="general-form" onsubmit="event.preventDefault(); alert('Solicitud enviada. Nuestro equipo de Alianzas te contactará pronto.'); this.reset();">
+                                <div class="form-group">
+                                    <label class="form-label">Nombre de la Empresa</label>
+                                    <input type="text" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Persona de Contacto</label>
+                                    <input type="text" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Tipo de Colaboración</label>
+                                    <select class="form-input">
+                                        <option>Patrocinio Financiero</option>
+                                        <option>Voluntariado Corporativo</option>
+                                        <option>Donación en Especie</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn--primary btn--full mt-lg">Enviar Propuesta</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__heading">Fundación Esperanza</h3>
+                    <p class="footer__text">Impulsando el cambio social y brindando oportunidades a quienes más lo necesitan. Tu apoyo hace la diferencia.</p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Enlaces Rápidos</h3>
+                    <ul aria-label="Enlaces del pie de página">
+                        <li><a href="nosotros.html" class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="proyectos.html" class="footer__link">Nuestros Proyectos</a></li>
+                        <li><a href="transparencia.html" class="footer__link">Informes Financieros</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__heading">Contacto</h3>
+                    <p class="footer__text">
+                        📍 Av. de la Solidaridad 123, Ciudad<br>
+                        📞 +1 234 567 8900<br>
+                        ✉️ hola@fundacionesperanza.org
+                    </p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Fundación Esperanza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

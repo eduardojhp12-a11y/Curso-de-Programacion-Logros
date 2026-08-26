@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guías de Viaje - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="guides section-padding">
+      <div class="container">
+        <h1 class="section-title">Guías de Viaje Prácticas</h1>
+        
+        <div class="post-content">
+          <h2>Comparativa de Presupuestos (Por Día)</h2>
+          <p>Planifica tu próximo viaje estimando los costos promedio diarios en diferentes regiones del mundo, basados en un estilo de viaje "Flashpacker" (mochilero con algunas comodidades).</p>
+          
+          <div class="table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Región / Destino</th>
+                  <th>Alojamiento (Hostal/Airbnb)</th>
+                  <th>Comida (Local + 1 Restaurante)</th>
+                  <th>Transporte & Actividades</th>
+                  <th>Total Estimado (USD)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sudeste Asiático (Tailandia, Vietnam)</td>
+                  <td>$10 - $20</td>
+                  <td>$10 - $15</td>
+                  <td>$15 - $25</td>
+                  <td><strong>$35 - $60</strong></td>
+                </tr>
+                <tr>
+                  <td>Europa del Este (Polonia, Hungría)</td>
+                  <td>$25 - $40</td>
+                  <td>$20 - $30</td>
+                  <td>$20 - $30</td>
+                  <td><strong>$65 - $100</strong></td>
+                </tr>
+                <tr>
+                  <td>América del Sur (Perú, Colombia)</td>
+                  <td>$15 - $30</td>
+                  <td>$15 - $25</td>
+                  <td>$20 - $35</td>
+                  <td><strong>$50 - $90</strong></td>
+                </tr>
+                <tr>
+                  <td>Europa Occidental (Francia, Italia)</td>
+                  <td>$40 - $80</td>
+                  <td>$35 - $60</td>
+                  <td>$30 - $50</td>
+                  <td><strong>$105 - $190</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top: 64px;">Lista de Empaque: El Básico del Nómada</h2>
+          <p>Asegúrate de no olvidar lo esencial con este Checklist universal, pensado para viajar con mochila de mano.</p>
+          
+          <div class="checklist">
+            <h3 class="checklist__title">Documentos y Electrónica</h3>
+            <div class="checklist__list">
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> Pasaporte (y copias impresas)
+              </label>
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> Seguro de Viaje Internacional
+              </label>
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> Adaptador de Corriente Universal
+              </label>
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> Powerbank (Batería Externa 10000mAh)
+              </label>
+            </div>
+          </div>
+
+          <div class="checklist">
+            <h3 class="checklist__title">Ropa y Accesorios</h3>
+            <div class="checklist__list">
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> 3x Camisetas de secado rápido
+              </label>
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> 1x Chaqueta impermeable ligera
+              </label>
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> Calzado cómodo de trekking
+              </label>
+              <label class="checklist__item">
+                <input type="checkbox" class="checklist__checkbox"> Botella de agua reutilizable (con filtro)
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3 class="footer__title">Tierra y Viento</h3>
+          <p class="footer__description">Explorando el mundo a través de historias, fotografías y guías prácticas para nómadas y amantes del estilo de vida consciente.</p>
+        </div>
+        
+        <div class="footer__links">
+          <h4 class="footer__links-title">Enlaces Legales</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__newsletter">
+          <h4 class="footer__links-title">Únete a la Aventura</h4>
+          <p class="footer__description">Recibe nuestras mejores historias y guías directamente en tu correo.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter__button">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Tierra y Viento. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+

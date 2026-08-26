@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeEstate - Agencia Inmobiliaria Exclusiva</title>
+    <meta name="description" content="Encuentra tu espacio ideal con nuestra selección de propiedades de lujo.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Global -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#home" class="header__logo-link">LuxeEstate</a>
+            </div>
+            <nav class="header__nav" aria-label="Navegación Principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#home" class="header__nav-link">Inicio</a></li>
+                    <li class="header__nav-item"><a href="#catalog" class="header__nav-link">Catálogo</a></li>
+                    <li class="header__nav-item"><a href="#favorites" class="header__nav-link">Favoritos</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="#contact" class="button button--primary">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Página 1: Inicio -->
+        <section id="home" class="home-section" aria-label="Inicio">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero__overlay"></div>
+                <div class="hero__content">
+                    <h1 class="hero__title">Encuentra tu espacio ideal</h1>
+                    <p class="hero__subtitle">Descubre residencias exclusivas que definen tu estilo de vida.</p>
+                    
+                    <form class="hero__search-form" aria-label="Búsqueda rápida de propiedades">
+                        <div class="hero__search-group">
+                            <label for="property-type-hero" class="sr-only">Tipo de propiedad</label>
+                            <select id="property-type-hero" class="hero__search-input" name="type">
+                                <option value="">Tipo de propiedad</option>
+                                <option value="casa">Casa</option>
+                                <option value="apartamento">Apartamento</option>
+                                <option value="estudio">Estudio</option>
+                            </select>
+                        </div>
+                        <div class="hero__search-group">
+                            <label for="budget-hero" class="sr-only">Presupuesto máximo</label>
+                            <select id="budget-hero" class="hero__search-input" name="budget">
+                                <option value="">Presupuesto máximo</option>
+                                <option value="500000">Hasta $500,000</option>
+                                <option value="1000000">Hasta $1,000,000</option>
+                                <option value="5000000">Hasta $5,000,000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="button button--accent">Buscar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sección Destacados -->
+            <div class="featured">
+                <div class="featured__container">
+                    <h2 class="featured__title">Propiedades Destacadas</h2>
+                    <div class="featured__grid" id="featured-grid">
+                        <!-- Las tarjetas se inyectarán dinámicamente aquí en las siguientes fases -->
+                        <!-- Ejemplo semántico base -->
+                        <article class="property-card">
+                            <div class="property-card__image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vista exterior de Villa Moderna en la Costa" class="property-card__image">
+                            </div>
+                            <div class="property-card__content">
+                                <p class="property-card__price">$1,250,000</p>
+                                <h3 class="property-card__title">Villa Moderna en la Costa</h3>
+                                <ul class="property-card__features" aria-label="Características de la propiedad">
+                                    <li class="property-card__feature">4 Habitaciones</li>
+                                    <li class="property-card__feature">3 Baños</li>
+                                    <li class="property-card__feature">350 m²</li>
+                                </ul>
+                                <button class="button button--primary button--full-width property-card__action">Ver detalles</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página 2: Catálogo de Propiedades -->
+        <section id="catalog" class="catalog-section" style="display: none;" aria-label="Catálogo de Propiedades">
+            <div class="catalog-section__container">
+                <div class="catalog-section__header">
+                    <h2 class="catalog-section__title">Nuestro Catálogo</h2>
+                </div>
+                
+                <div class="catalog-section__layout">
+                    <!-- Barra lateral (Filtros) -->
+                    <aside class="catalog-filters">
+                        <h3 class="catalog-filters__title">Filtros</h3>
+                        <form id="catalog-filter-form" class="catalog-filters__form">
+                            
+                            <fieldset class="catalog-filters__group">
+                                <legend class="catalog-filters__legend">Tipo de Propiedad</legend>
+                                <div class="catalog-filters__checkbox-group">
+                                    <input type="checkbox" id="filter-type-casa" name="type" value="casa">
+                                    <label for="filter-type-casa">Casa</label>
+                                </div>
+                                <div class="catalog-filters__checkbox-group">
+                                    <input type="checkbox" id="filter-type-apartamento" name="type" value="apartamento">
+                                    <label for="filter-type-apartamento">Apartamento</label>
+                                </div>
+                                <div class="catalog-filters__checkbox-group">
+                                    <input type="checkbox" id="filter-type-estudio" name="type" value="estudio">
+                                    <label for="filter-type-estudio">Estudio</label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="catalog-filters__group">
+                                <legend class="catalog-filters__legend">Rango de Precio</legend>
+                                <div class="catalog-filters__range-group">
+                                    <label for="filter-price-min" class="sr-only">Precio Mínimo</label>
+                                    <input type="number" id="filter-price-min" placeholder="Mínimo" class="catalog-filters__input">
+                                    <span aria-hidden="true">-</span>
+                                    <label for="filter-price-max" class="sr-only">Precio Máximo</label>
+                                    <input type="number" id="filter-price-max" placeholder="Máximo" class="catalog-filters__input">
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="catalog-filters__group">
+                                <legend class="catalog-filters__legend">Comodidades</legend>
+                                <div class="catalog-filters__checkbox-group">
+                                    <input type="checkbox" id="filter-amenity-piscina" name="amenities" value="piscina">
+                                    <label for="filter-amenity-piscina">Piscina</label>
+                                </div>
+                                <div class="catalog-filters__checkbox-group">
+                                    <input type="checkbox" id="filter-amenity-estacionamiento" name="amenities" value="estacionamiento">
+                                    <label for="filter-amenity-estacionamiento">Estacionamiento</label>
+                                </div>
+                            </fieldset>
+
+                        </form>
+                    </aside>
+
+                    <!-- Grid de Resultados -->
+                    <div class="catalog-results">
+                        <div class="catalog-results__grid" id="catalog-grid">
+                            <!-- Inyectado vía Vanilla JS en fases posteriores -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página 3: Detalle de Propiedad -->
+        <section id="property-detail" class="detail-section" style="display: none;" aria-label="Detalle de Propiedad">
+            <div class="detail-section__container">
+                <button class="button button--secondary detail-section__back-button" id="btn-back-catalog">
+                    Volver al catálogo
+                </button>
+                
+                <div class="property-detail">
+                    <div class="property-detail__gallery">
+                        <!-- Carrusel de imágenes -->
+                        <div class="carousel">
+                            <div class="carousel__main-image-wrapper">
+                                <img src="" alt="Vista principal de la propiedad" id="detail-main-image" class="carousel__main-image">
+                            </div>
+                            <div class="carousel__thumbnails" id="detail-thumbnails">
+                                <!-- Miniaturas generadas por JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-detail__info">
+                        <div class="property-detail__header">
+                            <h2 class="property-detail__title" id="detail-title">Cargando...</h2>
+                            <p class="property-detail__price" id="detail-price">---</p>
+                        </div>
+                        
+                        <div class="property-detail__description">
+                            <h3>Descripción</h3>
+                            <p id="detail-description">Cargando detalles de la propiedad...</p>
+                        </div>
+
+                        <div class="property-detail__features">
+                            <h3>Características</h3>
+                            <ul class="property-detail__features-list" id="detail-features-list">
+                                <!-- Características generadas por JS -->
+                            </ul>
+                        </div>
+
+                        <!-- Formulario flotante para agendar visita -->
+                        <div class="property-detail__contact-form-wrapper">
+                            <h3>Agendar una visita</h3>
+                            <form class="contact-form" id="schedule-visit-form">
+                                <div class="contact-form__group">
+                                    <label for="visit-name" class="contact-form__label">Nombre completo</label>
+                                    <input type="text" id="visit-name" class="contact-form__input" required>
+                                </div>
+                                <div class="contact-form__group">
+                                    <label for="visit-email" class="contact-form__label">Correo electrónico</label>
+                                    <input type="email" id="visit-email" class="contact-form__input" required>
+                                </div>
+                                <div class="contact-form__group">
+                                    <label for="visit-date" class="contact-form__label">Fecha preferida</label>
+                                    <input type="date" id="visit-date" class="contact-form__input" required>
+                                </div>
+                                <div class="contact-form__group">
+                                    <label for="visit-message" class="contact-form__label">Mensaje</label>
+                                    <textarea id="visit-message" class="contact-form__textarea" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="button button--accent button--full-width">Solicitar Visita</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Global -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <h2 class="footer__logo">LuxeEstate</h2>
+                <p class="footer__tagline">Redefiniendo el concepto de exclusividad y confort.</p>
+            </div>
+            <div class="footer__links">
+                <h3 class="footer__title">Enlaces Rápidos</h3>
+                <ul class="footer__list">
+                    <li><a href="#home" class="footer__link">Inicio</a></li>
+                    <li><a href="#catalog" class="footer__link">Catálogo</a></li>
+                    <li><a href="#about" class="footer__link">Nosotros</a></li>
+                    <li><a href="#contact" class="footer__link">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h3 class="footer__title">Contacto</h3>
+                <address class="footer__address">
+                    <p>Avenida del Mar 1234, Distrito Financiero.</p>
+                    <p>Tel: +1 234 567 890</p>
+                    <p>Email: contacto@luxeestate.com</p>
+                </address>
+            </div>
+            <div class="footer__social">
+                <h3 class="footer__title">Síguenos</h3>
+                <div class="footer__social-links">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">Facebook</a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">Instagram</a>
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 LuxeEstate. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>

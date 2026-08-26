@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Hunter x Hunter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="index.html">AnimeStream</a>
+            </div>
+            <div class="header__search">
+                <input type="text" placeholder="Buscar anime...">
+            </div>
+            <ul class="header__menu">
+                <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+                <li class="header__item"><a href="directorio.html" class="header__link">Directorio</a></li>
+                <li class="header__item"><a href="calendario.html" class="header__link">Calendario</a></li>
+                <li class="header__item"><a href="noticias.html" class="header__link">Noticias</a></li>
+            </ul>
+            <div class="header__actions">
+                <a href="watchlist.html" class="header__icon">Mi Lista</a>
+                <a href="login.html" class="header__btn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="anime-hero">
+            <div class="anime-hero__backdrop" style="background-image: url('https://via.placeholder.com/1920x1080/151c27/333333?text=Hunter+x+Hunter+Backdrop');"></div>
+            <div class="anime-hero__content">
+                <figure class="anime-hero__poster">
+                    <img src="https://via.placeholder.com/300x450/151c27/e1e6f0?text=HxH+Poster" alt="Hunter x Hunter">
+                </figure>
+                <div class="anime-hero__details">
+                    <h1 class="anime-hero__title">Hunter x Hunter</h1>
+                    <ul class="anime-hero__tags">
+                        <li class="anime-hero__tag">Shonen</li>
+                        <li class="anime-hero__tag">Acción</li>
+                        <li class="anime-hero__tag">Aventura</li>
+                    </ul>
+                    <div class="anime-hero__stats">
+                        <span>⭐ 9.0 Rating</span>
+                        <span>MADHOUSE</span>
+                        <span>Finalizado (148 Episodios)</span>
+                    </div>
+                    <p class="anime-hero__synopsis">
+                        Gon Freecss descubre que su padre, a quien creía muerto, es un legendario Cazador, una persona que ha demostrado su valía y se especializa en la búsqueda de tesoros raros, bestias mágicas y otros hombres. A pesar de que su padre abandonó a Gon para perseguir sus propios sueños, Gon decide seguir sus pasos y aprobar el riguroso Examen de Cazador.
+                    </p>
+                    <div class="anime-hero__actions">
+                        <a href="reproductor.html" class="btn btn--primary">Comenzar a ver</a>
+                        <button class="btn btn--secondary" id="add-watchlist">Añadir a Mi Lista</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="anime-seasons">
+            <div class="anime-seasons__header">
+                <h2 class="anime-seasons__title">Arcos Argumentales</h2>
+            </div>
+            
+            <div class="arc-list">
+                <article class="arc-card">
+                    <div class="arc-card__image">
+                        <img src="https://via.placeholder.com/300x169/151c27/e1e6f0?text=Examen+de+Cazador" alt="Examen de Cazador">
+                    </div>
+                    <div class="arc-card__info">
+                        <h3 class="arc-card__title">Examen de Cazador</h3>
+                        <p class="arc-card__episodes">Episodios 1 - 21</p>
+                    </div>
+                </article>
+
+                <article class="arc-card">
+                    <div class="arc-card__image">
+                        <img src="https://via.placeholder.com/300x169/151c27/e1e6f0?text=Coliseo+del+Cielo" alt="Coliseo del Cielo">
+                    </div>
+                    <div class="arc-card__info">
+                        <h3 class="arc-card__title">Coliseo del Cielo</h3>
+                        <p class="arc-card__episodes">Episodios 27 - 36</p>
+                    </div>
+                </article>
+
+                <article class="arc-card">
+                    <div class="arc-card__image">
+                        <img src="https://via.placeholder.com/300x169/151c27/e1e6f0?text=Yorknew+City" alt="Yorknew City">
+                    </div>
+                    <div class="arc-card__info">
+                        <h3 class="arc-card__title">Ciudad Yorknew (Brigada Fantasma)</h3>
+                        <p class="arc-card__episodes">Episodios 37 - 58</p>
+                    </div>
+                </article>
+                
+                <article class="arc-card">
+                    <div class="arc-card__image">
+                        <img src="https://via.placeholder.com/300x169/151c27/e1e6f0?text=Greed+Island" alt="Greed Island">
+                    </div>
+                    <div class="arc-card__info">
+                        <h3 class="arc-card__title">Greed Island</h3>
+                        <p class="arc-card__episodes">Episodios 59 - 75</p>
+                    </div>
+                </article>
+
+                <article class="arc-card">
+                    <div class="arc-card__image">
+                        <img src="https://via.placeholder.com/300x169/151c27/e1e6f0?text=Hormigas+Quimera" alt="Hormigas Quimera">
+                    </div>
+                    <div class="arc-card__info">
+                        <h3 class="arc-card__title">Hormigas Quimera</h3>
+                        <p class="arc-card__episodes">Episodios 76 - 136</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">&copy; 2026 AnimeStream. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

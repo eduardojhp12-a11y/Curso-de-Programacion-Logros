@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos - Tierra y Viento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Tierra y Viento</a>
+      
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item"><a href="index.html" class="header__link">Inicio</a></li>
+          <li class="header__item"><a href="destinos.html" class="header__link">Destinos</a></li>
+          <li class="header__item"><a href="galeria.html" class="header__link">Galería</a></li>
+          <li class="header__item"><a href="guias.html" class="header__link">Guías</a></li>
+          <li class="header__item"><a href="recursos.html" class="header__link">Recursos</a></li>
+          <li class="header__item"><a href="sobre-mi.html" class="header__link">Sobre Mí</a></li>
+          <li class="header__item"><a href="favoritos.html" class="header__link" aria-label="Ver favoritos">🔖 Favoritos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="destinations-hub section-padding">
+      <div class="container">
+        <h1 class="section-title">Explora por Destino</h1>
+        
+        <div class="filter-bar" id="filterBar">
+          <button class="filter-btn filter-btn--active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="europa">Europa</button>
+          <button class="filter-btn" data-filter="asia">Asia</button>
+          <button class="filter-btn" data-filter="america">América</button>
+          <button class="filter-btn" data-filter="africa">África</button>
+        </div>
+
+        <div class="grid-cards" id="destinationsGrid">
+          <!-- Tarjeta -->
+          <article class="card" data-category="africa">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Marruecos" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Marruecos</span>
+              <h3 class="card__title"><a href="post.html">Perdiéndose en los colores de la Medina</a></h3>
+              <p class="card__excerpt">Una guía sensorial a través de los zocos, especias y la vibrante cultura del corazón de Marruecos.</p>
+              <div class="card__meta">
+                <span class="card__date">12 Ago, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="1">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta -->
+          <article class="card" data-category="europa">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="París" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Francia</span>
+              <h3 class="card__title"><a href="post.html">Un fin de semana bohemio en Montmartre</a></h3>
+              <p class="card__excerpt">Cafés escondidos, arte callejero y la magia inagotable del barrio más romántico de París.</p>
+              <div class="card__meta">
+                <span class="card__date">05 Ago, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="2">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta -->
+          <article class="card" data-category="america">
+            <img src="https://images.unsplash.com/photo-1504280741564-c6a6f11cb202?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Patagonia" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Argentina</span>
+              <h3 class="card__title"><a href="post.html">Guía de Trekking en El Chaltén</a></h3>
+              <p class="card__excerpt">Todo lo que necesitas saber para prepararte para los senderos más imponentes del fin del mundo.</p>
+              <div class="card__meta">
+                <span class="card__date">28 Jul, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="3">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta -->
+          <article class="card" data-category="asia">
+            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tailandia" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Tailandia</span>
+              <h3 class="card__title"><a href="post.html">Templos y templanza en Chiang Mai</a></h3>
+              <p class="card__excerpt">Descubre la espiritualidad y tranquilidad del norte de Tailandia entre monjes y montañas.</p>
+              <div class="card__meta">
+                <span class="card__date">15 Jul, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="4">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta -->
+          <article class="card" data-category="europa">
+            <img src="https://images.unsplash.com/photo-1515542622106-78b28af7815d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Roma" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Italia</span>
+              <h3 class="card__title"><a href="post.html">Paseando por la Ciudad Eterna</a></h3>
+              <p class="card__excerpt">Ruinas antiguas, pasta fresca y la dulce vida romana a través de un lente fotográfico.</p>
+              <div class="card__meta">
+                <span class="card__date">02 Jul, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="5">🔖</button>
+              </div>
+            </div>
+          </article>
+          <!-- Tarjeta -->
+          <article class="card" data-category="america">
+            <img src="https://images.unsplash.com/photo-1518182170546-076616fd4603?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Perú" class="card__img">
+            <div class="card__content">
+              <span class="card__tag">Perú</span>
+              <h3 class="card__title"><a href="post.html">El amanecer en Machu Picchu</a></h3>
+              <p class="card__excerpt">La experiencia transformadora de ver el sol salir sobre las antiguas ruinas incas.</p>
+              <div class="card__meta">
+                <span class="card__date">20 Jun, 2026</span>
+                <button class="card__bookmark btn-bookmark" aria-label="Guardar en favoritos" data-id="6">🔖</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3 class="footer__title">Tierra y Viento</h3>
+          <p class="footer__description">Explorando el mundo a través de historias, fotografías y guías prácticas para nómadas y amantes del estilo de vida consciente.</p>
+        </div>
+        
+        <div class="footer__links">
+          <h4 class="footer__links-title">Enlaces Legales</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__newsletter">
+          <h4 class="footer__links-title">Únete a la Aventura</h4>
+          <p class="footer__description">Recibe nuestras mejores historias y guías directamente en tu correo.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter__button">Suscribir</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Tierra y Viento. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+

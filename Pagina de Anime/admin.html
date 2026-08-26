@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream - Panel de Administración</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar__header">
+                <a href="index.html" class="header__logo">AnimeStream <span class="admin-badge">STAFF</span></a>
+            </div>
+            <nav class="admin-nav">
+                <ul class="admin-nav__list">
+                    <li class="admin-nav__item">
+                        <a href="#" class="admin-nav__link admin-nav__link--active">Dashboard</a>
+                    </li>
+                    <li class="admin-nav__item">
+                        <a href="#" class="admin-nav__link">Gestión de Animes</a>
+                    </li>
+                    <li class="admin-nav__item">
+                        <a href="#" class="admin-nav__link">Subir Episodios</a>
+                    </li>
+                    <li class="admin-nav__item">
+                        <a href="#" class="admin-nav__link">Usuarios y Reportes</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="admin-sidebar__footer">
+                <a href="index.html" class="btn btn--secondary" style="width:100%; text-align:center;">Volver al Sitio</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1 class="admin-header__title">Dashboard Overview</h1>
+                <div class="admin-header__user">
+                    <span>Hola, Moderador_01</span>
+                    <div class="admin-avatar">M</div>
+                </div>
+            </header>
+
+            <section class="admin-stats">
+                <div class="stat-card">
+                    <h3 class="stat-card__title">Usuarios Activos</h3>
+                    <p class="stat-card__value">124,532</p>
+                    <span class="stat-card__trend stat-card__trend--up">↑ 12% este mes</span>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-card__title">Animes en Base</h3>
+                    <p class="stat-card__value">3,421</p>
+                    <span class="stat-card__trend">Estable</span>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-card__title">Reportes Pendientes</h3>
+                    <p class="stat-card__value" style="color: #ff3333;">47</p>
+                    <span class="stat-card__trend stat-card__trend--down">Requieren revisión</span>
+                </div>
+            </section>
+
+            <section class="admin-content">
+                <div class="admin-panel">
+                    <div class="admin-panel__header">
+                        <h2>Gestión Rápida de Metadatos (Últimos Añadidos)</h2>
+                        <button class="btn btn--primary">Añadir Nuevo Anime</button>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Título</th>
+                                    <th>Estado</th>
+                                    <th>Último Episodio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#10045</td>
+                                    <td><strong>Hunter x Hunter</strong></td>
+                                    <td><span class="status-badge status-badge--finished">Finalizado</span></td>
+                                    <td>Episodio 148</td>
+                                    <td>
+                                        <button class="action-btn action-btn--edit">Editar</button>
+                                        <button class="action-btn action-btn--delete">Borrar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#10046</td>
+                                    <td><strong>One Piece</strong></td>
+                                    <td><span class="status-badge status-badge--airing">En Emisión</span></td>
+                                    <td>Episodio 1071</td>
+                                    <td>
+                                        <button class="action-btn action-btn--edit">Editar</button>
+                                        <button class="action-btn action-btn--delete">Borrar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#10047</td>
+                                    <td><strong>Solo Leveling</strong></td>
+                                    <td><span class="status-badge status-badge--airing">En Emisión</span></td>
+                                    <td>Episodio 8</td>
+                                    <td>
+                                        <button class="action-btn action-btn--edit">Editar</button>
+                                        <button class="action-btn action-btn--delete">Borrar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

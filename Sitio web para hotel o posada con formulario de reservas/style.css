@@ -1,0 +1,834 @@
+/* ==========================================================================
+   Importación de Tipografías
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* ==========================================================================
+   Variables Nativas (Design System)
+   ========================================================================== */
+:root {
+    /* Paleta de Colores */
+    --color-primary: #1C3738; /* Verde bosque profundo */
+    --color-secondary: #F4F1DE; /* Crema cálido */
+    --color-accent: #E07A5F; /* Terracota suave */
+    --color-text-main: #333333; /* Gris oscuro */
+    --color-background: #FAFAFA; /* Blanco roto */
+    --color-white: #FFFFFF;
+
+    /* Tipografía */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Espaciado (Base 16px) */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1rem;     /* 16px */
+    --spacing-md: 1.5rem;   /* 24px */
+    --spacing-lg: 2rem;     /* 32px */
+    --spacing-xl: 3rem;     /* 48px */
+    --spacing-xxl: 5rem;    /* 80px */
+
+    /* Geometría y Efectos */
+    --border-radius-base: 4px;
+    --transition-base: all 0.3s ease-in-out;
+    --shadow-base: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Reset Global
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* 16px base */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Tipografía Base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Clases Utilitarias (Globales)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-base);
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn--accent {
+    background-color: var(--color-accent);
+}
+
+.btn--accent:hover,
+.btn--accent:focus {
+    background-color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Componente: Navbar (Bloque)
+   ========================================================================== */
+.navbar {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-base);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+}
+
+/* Elemento: Brand / Logo */
+.navbar__brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+/* Elemento: Menú de Navegación */
+.navbar__nav {
+    display: flex;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.navbar__link {
+    font-weight: 400;
+    color: var(--color-text-main);
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: var(--transition-base);
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+    width: 100%;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: var(--color-primary);
+}
+
+/* Modificador: CTA en el menú */
+.navbar__link--cta {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-base);
+    font-weight: 700;
+    transition: var(--transition-base);
+}
+
+.navbar__link--cta::after {
+    display: none;
+}
+
+.navbar__link--cta:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-base);
+}
+
+/* Hamburguesa (Mobile) */
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: var(--spacing-xs);
+}
+
+.navbar__toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: var(--transition-base);
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   Componente: Footer (Bloque)
+   ========================================================================== */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: var(--spacing-xxl) 0 var(--spacing-md) 0;
+    margin-top: auto;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Elementos del Footer */
+.footer__col-title {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer__text {
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer__link {
+    color: var(--color-secondary);
+    opacity: 0.8;
+}
+
+.footer__link:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+/* Información de Contacto */
+.footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.footer__contact-icon {
+    color: var(--color-accent);
+    margin-top: 4px;
+}
+
+/* Copyright y Legal */
+.footer__bottom {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(244, 241, 222, 0.2);
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Media Queries (Responsive Básico para Navbar y Layout)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .navbar__toggle {
+        display: flex;
+    }
+
+    .navbar__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        display: none; /* Inicialmente oculto, se controla con JS */
+        flex-direction: column;
+        padding: var(--spacing-md) 0;
+        text-align: center;
+    }
+
+    .navbar__nav--open {
+        display: flex;
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .navbar__link--cta {
+        display: inline-block;
+        margin-top: var(--spacing-sm);
+    }
+}
+
+/* ==========================================================================
+   FASE 2: Estilos Específicos para Inicio (index.html)
+   ========================================================================== */
+
+/* Secciones Globales */
+.section {
+    padding: var(--spacing-xxl) 0;
+}
+
+.bg-light {
+    background-color: #EFEFEF;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: inherit;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    opacity: 0.8;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Componente: Hero (Bloque)
+   -------------------------------------------------------------------------- */
+.hero {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1551882547-ff40eb0d1b73?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 55, 56, 0.65); /* Overlay color primario con opacidad */
+    display: flex;
+    align-items: center;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    color: var(--color-white);
+    max-width: 800px;
+}
+
+.hero__title {
+    color: var(--color-white);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   Componente: About (Bloque)
+   -------------------------------------------------------------------------- */
+.about__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+    .about__container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xxl);
+    }
+}
+
+.about__description {
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.about__image-wrapper {
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+}
+
+.about__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about__image-wrapper:hover .about__image {
+    transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Componente: Room Card (Bloque)
+   -------------------------------------------------------------------------- */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.room-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+    box-shadow: var(--shadow-base);
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.room-card__image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.room-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-card__image {
+    transform: scale(1.05);
+}
+
+.room-card__price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    border-top-left-radius: var(--border-radius-base);
+}
+
+.room-card__content {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.room-card__description {
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    opacity: 0.9;
+    flex-grow: 1;
+}
+
+.room-card__amenities {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.room-card__amenity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text-main);
+    opacity: 0.8;
+}
+
+.room-card__amenity svg {
+    color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Componente: Testimonials (Bloque)
+   -------------------------------------------------------------------------- */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--shadow-base);
+    text-align: center;
+    border-top: 4px solid var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-card__stars {
+    color: #F5A623;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.testimonial-card__quote {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-main);
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.testimonial-card__author {
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   FASE 3: Estilos Específicos para Habitaciones y Servicios
+   ========================================================================== */
+
+/* Componente: Page Header */
+.page-header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-xxl) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.page-header__title {
+    color: var(--color-white);
+    font-size: 3rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.page-header__subtitle {
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+/* Componente: Service Block (servicios.html) */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
+}
+
+.service-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .service-block {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Alternar orden en pantallas grandes para diseño en zigzag */
+    .service-block:nth-child(even) .service-block__image-wrapper {
+        order: 2;
+    }
+    .service-block:nth-child(even) .service-block__content {
+        order: 1;
+    }
+}
+
+.service-block__image-wrapper {
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+    box-shadow: var(--shadow-base);
+    height: 350px;
+}
+
+.service-block__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-block:hover .service-block__image {
+    transform: scale(1.03);
+}
+
+.service-block__title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-block__description {
+    font-size: 1.05rem;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-block__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-block__feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+    color: var(--color-accent);
+}
+
+/* ==========================================================================
+   FASE 4: Estilos Específicos para Reservas (Formulario)
+   ========================================================================== */
+
+.booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--shadow-base);
+}
+
+.booking-form__title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.booking-form__subtitle {
+    font-size: 1.5rem;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+@media screen and (min-width: 768px) {
+    .form-row {
+        flex-direction: row;
+    }
+    
+    .form-group {
+        flex: 1;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-xs);
+}
+
+.form-label {
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-select {
+    padding: var(--spacing-sm);
+    border: 1px solid #CCC;
+    border-radius: var(--border-radius-base);
+    font-size: 1rem;
+    transition: var(--transition-base);
+    background-color: var(--color-background);
+}
+
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(28, 55, 56, 0.1);
+}
+
+.input-error {
+    border-color: #D9534F;
+    background-color: #FDF2F2;
+}
+
+.form-error {
+    color: #D9534F;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    min-height: 1.2rem;
+}
+
+.booking-form__submit {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+/* Mensaje de Éxito */
+.booking-success {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: #E8F5E9;
+    border: 1px solid #4CAF50;
+    border-radius: var(--border-radius-base);
+    text-align: center;
+    color: #2E7D32;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.booking-success__icon {
+    color: #4CAF50;
+    margin-bottom: var(--spacing-sm);
+}
+
+.booking-success__title {
+    font-size: 1.5rem;
+    color: #2E7D32;
+    margin-bottom: var(--spacing-xs);
+}
+
+.booking-success__message {
+    color: #1B5E20;
+    margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
