@@ -4,7 +4,7 @@
     --primary-color: #ed1d24;
     --primary-color-dark: #b80314;
     --white: #FFFFFF;
-    max-width: 1200px;
+    --max-width: 1200px;
 }
 
 * {
@@ -149,7 +149,7 @@ nav {
 }
 
 button {
-    padding: 1.5rem 2 rem;
+    padding: 1.5rem 2rem;
     margin-bottom: 1.5rem;
     outline: none;
     border: none;
@@ -175,7 +175,7 @@ button:hover {
 .socials a {
     display: inline-flex;
     padding: 9px 10px;
-    font-display: 1.2rem;
+    font-size: 1.2rem;
     color: var(--white);
     border: 1px solid var(--primary-color);
     border-radius: 100%;
